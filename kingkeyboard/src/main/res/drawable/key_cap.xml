@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/king_keyboard_key_cap"
+    android:tint="@color/king_keyboard_key_text_color" />

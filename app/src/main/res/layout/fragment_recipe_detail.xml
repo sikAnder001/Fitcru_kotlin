@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_dark_90"
+        tools:context=".fragment.RecipeDetailFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_cons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/go_back_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+                android:background="@drawable/back_btn_circular_background"
+                android:src="@drawable/back_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--     <ImageView
+                     android:id="@+id/notifi_btn"
+                     android:layout_width="35dp"
+                     android:layout_height="35dp"
+                     android:layout_marginHorizontal="16dp"
+                     android:layout_marginVertical="16dp"
+                     android:background="@drawable/back_btn_circular_background"
+                     android:padding="5dp"
+                     android:src="@drawable/notification"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintRight_toRightOf="parent"
+                     app:layout_constraintTop_toTopOf="parent" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_cons">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/main_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="340dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <ImageView
+                            android:id="@+id/iv"
+                            android:layout_width="match_parent"
+                            android:layout_height="340dp"
+                            android:background="@color/black"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/place_holder"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <!--  <com.google.android.exoplayer2.ui.PlayerView
+                              android:id="@+id/exo_video"
+                              android:layout_width="match_parent"
+                              android:layout_height="340dp"
+                              android:background="@color/black"
+                              app:controller_layout_id="@layout/exoplayer_custom_controls"
+                              app:layout_constraintEnd_toEndOf="parent"
+                              app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintTop_toTopOf="parent"
+                              app:resize_mode="fill"
+                              app:show_buffering="when_playing" />
+  -->
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/serving_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginBottom="35dp"
+                        android:background="@drawable/recipe_button_background"
+                        android:fontFamily="@font/notosans_semibold"
+                        android:gravity="center"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:text="@string/_1_serving"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@id/main_container"
+                        app:layout_constraintLeft_toLeftOf="@id/main_container" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/slide_up_background"
+                        app:layout_constraintLeft_toLeftOf="@id/serving_text"
+                        app:layout_constraintRight_toRightOf="@id/serving_text"
+                        app:layout_constraintTop_toBottomOf="@id/serving_text">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/li_break"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="18dp"
+                            android:layout_marginTop="35dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <TextView
+                                    android:id="@+id/tvMealType"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:text="@string/breakfast"
+                                    android:textColor="@color/overlay_light_30"
+                                    android:textSize="14sp"
+                                    android:visibility="gone"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                                <TextView
+                                    android:id="@+id/tvFoodName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/notosans_semibold"
+                                    android:gravity="fill"
+                                    android:text="@string/oats_idli"
+                                    android:textColor="@color/white"
+                                    android:textSize="28sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/tvMealType" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_weight="1.2">
+
+                                <TextView
+                                    android:id="@+id/tv_part_time"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+
+                                    android:fontFamily="@font/notosans_regular"
+                                    android:gravity="end"
+                                    android:text="@string/total_time"
+                                    android:textColor="@color/overlay_light_30"
+                                    android:textSize="12sp"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="end"
+                                    android:orientation="horizontal"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintLeft_toLeftOf="parent"
+                                    app:layout_constraintRight_toRightOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@id/tv_part_time">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="22dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginEnd="5dp"
+                                        android:src="@drawable/part_time_icon" />
+
+                                    <TextView
+                                        android:id="@+id/tvDuration"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:fontFamily="@font/notosans_regular"
+                                        android:singleLine="true"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <TextView
+                            android:id="@+id/tvDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginTop="18dp"
+                            android:fontFamily="@font/notosans_regular"
+                            android:padding="5dp"
+                            android:text="@string/these_easy_oats_idli_are_light_fluffy_cakes_perfect_for_a_quick_breakfast_or_healthy_on_the_go_snack"
+                            android:textColor="@color/overlay_light_80"
+                            android:textSize="14sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/li_break" />
+
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/tagChip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:padding="30dp"
+                            android:visibility="gone"
+                            app:chipSpacing="12dp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+                        <TextView
+                            android:id="@+id/tv_how_to_make"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/notosans_medium"
+                            android:text="@string/how_to_make"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tagChip" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/how_to_make_rv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginVertical="15dp"
+                            android:orientation="vertical"
+                            android:overScrollMode="never"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_how_to_make"
+                            tools:listitem="@layout/recipe_rv_how_to_make_item" />
+
+                        <TextView
+                            android:id="@+id/tvHowToMake"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tv_how_to_make" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

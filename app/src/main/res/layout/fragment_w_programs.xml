@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_95"
+        tools:context=".fragment.WProgramsFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/action_program"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:id="@+id/slider_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="200dp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/join_now_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/round_background_gradient"
+                    android:fontFamily="@font/notosans_bold"
+                    android:gravity="center"
+                    android:text="@string/join_now"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/slider_relative" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvGoals"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="8dp"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/join_now_btn"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/goal_and_program_parent" />
+
+                <TextView
+                    android:id="@+id/text_trending_offers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/notosans_semibold"
+                    android:text="@string/trending_offers"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvGoals" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTrendingOffers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="8dp"
+                    android:orientation="horizontal"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_trending_offers"
+                    tools:listitem="@layout/trending_session_list" />
+
+                <TextView
+                    android:id="@+id/tvPlaceHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginVertical="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/background_for_add_meal_time_picker"
+                    android:fontFamily="@font/notosans_semibold"
+                    android:gravity="center"
+                    android:text="Program Not Available"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_trending_offers" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvGoals2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPlaceHolder"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/goal_and_program_parent" />
+
+                <TextView
+                    android:id="@+id/text_benifits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/notosans_semibold"
+                    android:text="@string/benefits"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvGoals2" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBenefits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="8dp"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_benifits"
+                    app:spanCount="2"
+                    tools:itemCount="4"
+                    tools:listitem="@layout/workout_benefits_item" />
+
+                <TextView
+                    android:id="@+id/text_happy_customer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/notosans_semibold"
+                    android:text="@string/our_happy_customers"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvBenefits" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/happy_customer_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toTopOf="@id/dots_indicator"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text_happy_customer" />
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginBottom="25dp"
+                    android:visibility="gone"
+                    app:dotsColor="@color/overlay_light_30"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="16dp"
+                    app:dotsSpacing="4dp"
+                    app:dotsWidthFactor="4.0"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/happy_customer_vp"
+                    app:progressMode="false"
+                    app:selectedDotColor="@color/rating_color" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

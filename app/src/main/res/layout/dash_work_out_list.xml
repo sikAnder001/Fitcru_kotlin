@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="5dp"
+    android:background="#000"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent_10"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="105dp"
+                        android:layout_height="110dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/place_holder" />
+
+                    <ImageView
+                        android:id="@+id/play_btn"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/exo_ic_play_circle_filled"
+                        android:visibility="gone"
+                        app:tint="@color/grey_3" />
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="20dp">
+
+                    <TextView
+                        android:id="@+id/tvWorkoutName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="20dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:maxLines="2"
+                        android:text="Ipsum Lorem Ipsum"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/equipTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:drawableLeft="@drawable/body_icon"
+                        android:fontFamily="@font/notosans_regular"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="12dp" />
+
+
+                    <TextView
+                        android:id="@+id/targetTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+
+                        android:fontFamily="@font/notosans_regular"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/gray"
+                        android:textSize="12dp"
+                        android:visibility="gone" />
+                    <!--   <LinearLayout
+                           android:id="@+id/target_duration"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="5dp">
+
+                           <TextView
+                               android:id="@+id/targetTv"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginLeft="5dp"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginRight="20dp"
+                               android:drawableLeft="@drawable/body_icon"
+                               android:fontFamily="@font/notosans_regular"
+                               android:singleLine="true"
+                               android:text=""
+                               android:textColor="@color/gray"
+                               android:textSize="12dp" />
+
+                          &lt;!&ndash; <TextView
+                               android:id="@+id/durationTv"
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginLeft="5dp"
+                               android:layout_marginTop="10dp"
+                               android:layout_marginRight="20dp"
+                               android:drawableLeft="@drawable/part_time_icon"
+                               android:fontFamily="@font/notosans_regular"
+                               android:singleLine="true"
+                               android:text=""
+                               android:textColor="@color/gray"
+                               android:textSize="12dp" />&ndash;&gt;
+                       </LinearLayout>-->
+                    <!--    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/tvDuration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_watch"
+                                android:fontFamily="@font/manrope_regular"
+                                android:text="1 hr"
+                                android:textColor="@color/offwhite"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tvCoachName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20dp"
+                                android:drawableLeft="@drawable/ic_singleperson"
+                                android:fontFamily="@font/manrope_regular"
+                                android:text="Paul"
+                                android:textColor="@color/offwhite"
+                                android:textSize="12sp" />
+                        </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/startworkoutTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/round_background_gray"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:gravity="center"
+                            android:text="Start Now"
+                            android:textColor="@color/white"
+                            android:textSize="14dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/right_arrow"
+                            android:backgroundTint="@color/one" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

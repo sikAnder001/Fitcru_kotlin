@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_for_bottom_sheet"
+        android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_container">
+
+            <LinearLayout
+                android:id="@+id/items_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/header_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/set_reminder_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosans_semibold"
+                        android:text="@string/filter"
+                        android:textColor="@color/grey_10"
+                        android:textSize="22sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/crossBTN"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cross_icon_for_bottom_sheet"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/notosans_medium"
+                    android:text="@string/gender"
+                    android:textColor="@color/grey_10"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvRange"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/Widget.MaterialComponents.Chip.Choice"
+                    app:chipSpacingVertical="12dp"
+                    app:singleSelection="true">
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+                <LinearLayout
+                    android:id="@+id/pricingLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="end">
+
+                    <TextView
+                        android:id="@+id/carb_gms_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/notosans_medium"
+                        android:padding="2dp"
+                        android:text="Pricing"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/tvRange"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvRange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosans_medium"
+                        android:gravity="left"
+                        android:text="₹0-99999"
+                        android:textColor="@color/grey_10"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/range_seek_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="0"
+                    android:valueTo="999999"
+                    app:labelBehavior="gone"
+                    app:thumbColor="@color/white"
+                    app:trackColorActive="@color/three"
+                    app:trackHeight="10dp"
+                    app:values="@array/initial_slider_values" />
+
+                <TextView
+                    android:id="@+id/gradeLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/notosans_medium"
+                    android:text="@string/grade"
+                    android:textColor="@color/grey_10"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvRange"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/groupGrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:chipSpacingVertical="12dp"
+                    app:singleSelection="true"></com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/notosans_medium"
+                    android:text="@string/specializations"
+                    android:textColor="@color/grey_10"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tvRange"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/groupSpecialization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/Theme.MaterialComponents.Light"
+                    app:chipSpacingVertical="12dp"></com.google.android.material.chip.ChipGroup>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <TextView
+                        android:id="@+id/reset"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/round_background_gradient"
+                        android:fontFamily="@font/notosans_bold"
+                        android:gravity="center"
+                        android:text="@string/reset"
+                        android:textColor="@color/white"
+
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/apply"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/round_background_gradient"
+                        android:fontFamily="@font/notosans_bold"
+                        android:gravity="center"
+                        android:text="@string/apply"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

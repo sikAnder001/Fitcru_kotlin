@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/overlay_dark_90"
+            tools:context=".fragment.CheckoutFragment">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/llFooter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/header_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="15dp">
+
+                        <ImageView
+                            android:id="@+id/back_btn"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:background="@drawable/back_btn_circular_background"
+                            android:gravity="center"
+                            android:src="@drawable/back_icon" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_weight="1"
+                            android:gravity="right">
+
+                            <ImageView
+                                android:id="@+id/search_icon"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:background="@drawable/back_btn_circular_background"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_search_icon"
+                                app:tint="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/cart_icon"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginStart="10dp"
+                                android:background="@drawable/back_btn_circular_background"
+                                android:padding="5dp"
+                                android:src="@drawable/food"
+                                app:tint="@color/white" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosans_semibold"
+                        android:text="@string/eat_fit"
+                        android:textColor="#FFFFFFE6"
+                        android:textSize="22dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp"
+                        app:cardBackgroundColor="@color/overlay_light_30"
+                        app:cardCornerRadius="16dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_location"
+                                android:drawablePadding="6dp"
+                                android:drawableTint="@color/white"
+                                android:fontFamily="@font/manrope_regular"
+                                android:padding="5dp"
+                                android:text="The corner building, Near Starbucks, devidas road, Eskar Borivali west, Mumbai-66 The corner building, Near Starbucks, devidas road, Eskar Borivali west, Mumbai-66"
+                                android:textAlignment="viewStart"
+                                android:textColor="#FFFFFFE6"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:id="@+id/tvChangeAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/manrope_regular"
+                                android:padding="5dp"
+                                android:paddingStart="30dp"
+                                android:text="@string/change"
+                                android:textColor="#2DE8A0"
+                                android:textSize="12dp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_alarm"
+                                android:drawablePadding="6dp"
+                                android:drawableTint="@color/white"
+                                android:fontFamily="@font/manrope_regular"
+                                android:padding="5dp"
+                                android:text="@string/delivery_in_25_minutes"
+                                android:textColor="#FFFFFFE6"
+                                android:textSize="12dp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/manrope_semibold"
+                        android:text="@string/your_order"
+                        android:textColor="#FFFFFFE6"
+                        android:textSize="16dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCartItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="2"
+                        tools:listitem="@layout/cart_item_list" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:cardBackgroundColor="@color/overlay_light_30"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="7dp">
+
+                            <EditText
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:fontFamily="@font/manrope_medium"
+                                android:hint="Enter Coupon Code"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColorHint="@color/grey_20"
+                                android:textSize="14dp" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/white"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="APPLY"
+                                android:textColor="#1EA5AC"
+                                android:textStyle="bold" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:cardBackgroundColor="@color/overlay_light_30"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="15dp">
+
+                            <EditText
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:drawableLeft="@drawable/ic_add"
+                                android:drawablePadding="10dp"
+                                android:drawableTint="@color/grey_20"
+                                android:fontFamily="@font/manrope_medium"
+                                android:hint="Add more items"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColorHint="@color/grey_20" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/overlay_light_30" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginEnd="10dp"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_edit"
+                                    app:tint="@color/white" />
+
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:backgroundTint="@color/grey_20"
+                                    android:fontFamily="@font/manrope_semibold"
+                                    android:text="Do you want to add Cooking instruction"
+                                    android:textColor="@color/grey_20"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        app:cardBackgroundColor="@color/overlay_light_30"
+                        app:cardCornerRadius="10dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:text="Total Items"
+                                    android:textColor="@color/grey_20"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:gravity="end"
+                                    android:text="&#8377;630.00"
+                                    android:textColor="@color/grey_20"
+                                    android:textSize="16dp" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:text="Taxes &amp; charges"
+                                    android:textColor="@color/grey_20"
+                                    android:textSize="16dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:gravity="end"
+                                    android:text="&#8377;65.50"
+                                    android:textColor="@color/grey_20"
+                                    android:textSize="16dp" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:background="@color/overlay_light_30" />
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_regular"
+                                    android:text="Grand Total"
+                                    android:textColor="@color/grey_10"
+                                    android:textSize="18dp" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:gravity="end"
+                                    android:text="&#8377;695.50"
+                                    android:textColor="@color/white"
+                                    android:textSize="18dp"
+                                    android:textStyle="bold" />
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.cardview.widget.CardView>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.core.widget.NestedScrollView>
+
+            <RelativeLayout
+                android:id="@+id/llFooter"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/overlay_light_30" />
+
+                <TextView
+                    android:id="@+id/btnPlaceOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="@drawable/round_background_gradient"
+                    android:fontFamily="@font/notosans_bold"
+                    android:gravity="center"
+                    android:text="Place Order"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

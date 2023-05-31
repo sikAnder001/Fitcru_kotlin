@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fitness.fitnessCru">
+    <!--
+      <queries>
+          <package android:name="com.facebook.katana" />
+      </queries>
+    -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />-->
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.quickblox.sample.messages.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START" />
+        </intent>
+    </queries>
+    <queries>
+        <package android:name="com.google.android.apps.fitness" />
+    </queries>
+
+    <application
+        android:name="com.fitness.fitnessCru.utility.Session"
+        android:allowBackup="true"
+        android:hasCode="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitCruNewAndroid"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+
+        tools:replace="android:hasCode">
+        <!--<activity
+            android:name="FogotOtpActivity"
+            android:exported="false" />-->
+        <activity
+            android:name=".activities.LinkDevicesActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.OpponentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.PermissionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.CallActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseAppTheme" />
+        <activity
+            android:name=".activities.AppInfoActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/place_holder" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/one" />
+
+        <service android:name="com.fitness.fitnessCru.quickbox.services.LoginService" />
+        <!--
+ <service
+             android:name=".quickbox.services.CallRecieveService"
+             android:enabled="true"
+             android:exported="true"/>
+        -->
+        <service
+            android:name="com.fitness.fitnessCru.quickbox.services.CallService"
+            android:foregroundServiceType="mediaProjection" />
+        <service
+            android:name="com.fitness.fitnessCru.quickbox.services.fcm.PushListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".helper.FirebaseMessageReceiver"
+            android:exported="false"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.quickblox.messages.services.fcm.QBFcmPushInstanceIDService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.quickblox.messages.TYPE"
+            android:value="GCM" />
+        <meta-data
+            android:name="com.quickblox.messages.SENDER_ID"
+            android:value="@string/sender_id" />
+        <meta-data
+            android:name="com.quickblox.messages.QB_ENVIRONMENT"
+            android:value="DEVELOPMENT" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="AAAAfTBp3ME:APA91bEXnXMSPB_BhNuEFb3Nzm6rm5wQ0JrYTrBKSmEsZfVb5ylJsKZkKJ3aX01eVlCZ0XPlxG082BprBVhwt-c2cki2Kwf6qx9qNo09FiOombV9iP27sOABqiPQSz8GU47ug35eAMJ3" />
+
+        <activity
+            android:name=".activities.CaochListingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.ViewImageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PrivacyPolicyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.TermsAndConditionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ChatActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".helper.FirebaseMessageReceiver"
+            android:exported="false"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".activities.WhiteBoardTwoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.VideoPlayerActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".activities.RazorPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SetupAllActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.MySummary"
+            android:exported="false" />
+        <activity
+            android:name=".activities.WhiteBoardWorkoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ElitePlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SighUpWithMobileActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activities.MealDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.QaWorkoutVibeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.EmailVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DummySignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.LoginMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activities.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ViewProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.PlanDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SubscriptionPlanActivity"
+            android:exported="false">
+
+            <!--
+              <intent-filter>
+                  <action android:name="android.intent.action.MAIN" />
+
+                  <category android:name="android.intent.category.LAUNCHER" />
+              </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".activities.ComeOn2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ComeOn1Activity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.CongratsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.QaGenderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.QaCalendarActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.QaDietTypeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.QaWhatBringsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.QaHeightWeightActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.PasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SignUpWithEmailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activities.OTPVerifyActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activities.MobileNumberActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activities.CreatePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.QaFitnessLevelActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.QaHowActiveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="com.facebook.sdk.ClientToken"
+            android:value="@string/facebook_client_token" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".helper.AlarmReceiver"
+            android:enabled="true" />
+        <receiver android:name="com.allyants.notifyme.NotificationPublisher" />
+        <receiver
+            android:name="com.allyants.notifyme.BootNotifyMe"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".helper.NotifyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

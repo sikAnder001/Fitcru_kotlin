@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:background="@drawable/round_back_transparent"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/coach_image"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/view_profile_img_icon" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="8dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/coach_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/manrope_medium"
+            android:padding="5dp"
+            android:text="@string/prashant_s"
+            android:textColor="@color/grey_10"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/coach_detail_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/manrope_medium"
+            android:paddingStart="5dp"
+            android:textColor="@color/grey_40"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round_background_gray"
+        android:drawableRight="@drawable/right_arrow"
+        android:drawableTint="@color/most"
+        android:fontFamily="@font/manrope_semibold"
+        android:padding="10dp"
+        android:text="@string/chat"
+        android:textColor="@color/grey_10"
+        android:textSize="14sp" />
+
+</LinearLayout>

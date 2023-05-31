@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activities.QaHeightWeightActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_cons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/gobackbtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:background="@drawable/back_btn_circular_background"
+            android:src="@drawable/back_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/skip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:gravity="center"
+            android:text="@string/lbl_skip"
+            android:textColor="@color/overlay_light_60"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <androidx.core.widget.NestedScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/manrope_extrabold"
+            android:gravity="start"
+            android:text="@string/lbl_height_weight_title"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/manrope_regular"
+            android:gravity="center"
+            android:paddingHorizontal="10dp"
+            android:text="@string/lbl_height_weight_subtitle"
+            android:textColor="@color/overlay_light_50"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/heightTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="start"
+            android:text="Height (ft)"
+            android:textColor="@color/overlay_light_60"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp">
+
+            <com.fitness.fitnessCru.ruleview_library.RuleView
+                android:id="@+id/ruleViewHeight"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="17dp"
+                app:gv_currentValue="5"
+                app:zjun_bgColor="@android:color/transparent"
+                app:zjun_gradationColor="@color/overlay_light_50"
+                app:zjun_indicatorLineColor="@color/one"
+                app:zjun_textColor="@color/overlay_light_70"
+                app:zjun_textSize="16sp" />
+
+            <TextView
+                android:id="@+id/pickFT"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="150dp"
+                android:background="@color/black"
+                android:gravity="center_horizontal"
+                android:text="5'0''"
+                android:textColor="@color/one"
+                android:textSize="28sp"
+
+                />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="start"
+            android:text="Weight (kg)"
+            android:textColor="@color/overlay_light_60"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp">
+
+            <com.fitness.fitnessCru.ruleview_library.RuleView
+                android:id="@+id/ruleViewweight"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="17dp"
+                app:gv_currentValue="65"
+                app:zjun_bgColor="@android:color/transparent"
+                app:zjun_gradationColor="@color/overlay_light_50"
+                app:zjun_indicatorLineColor="@color/one"
+                app:zjun_textColor="@color/overlay_light_70"
+                app:zjun_textSize="16sp" />
+
+            <TextView
+                android:id="@+id/pickKG"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="150dp"
+                android:background="@color/black"
+                android:gravity="center_horizontal"
+                android:text="65.0"
+                android:textColor="@color/one"
+                android:textSize="28sp"
+
+                />
+        </RelativeLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/nextBtn"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circulor_button"
+                    android:padding="25dp"
+                    android:src="@drawable/next"
+                    app:tint="@color/white" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/progressIndicator"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_centerInParent="true"
+                    android:progress="39"
+                    app:indicatorColor="@color/two"
+                    app:indicatorSize="95dp"
+                    app:trackColor="@color/transparent_20"
+                    app:trackThickness="3dp" />
+            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <!--    </androidx.core.widget.NestedScrollView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

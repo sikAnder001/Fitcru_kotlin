@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_95"
+
+
+        tools:context=".fragment.Workout">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/header_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- <TextView
+                 android:id="@+id/gobackbtn"
+                 android:layout_width="35dp"
+                 android:layout_height="35dp"
+                 android:layout_marginHorizontal="16dp"
+                 android:layout_marginVertical="16dp"
+                 android:background="@drawable/back_btn_circular_background"
+                 android:fontFamily="@font/notosans_semibold"
+                 android:gravity="center"
+                 android:textColor="@color/one"
+                 android:textSize="20sp" />-->
+
+            <FrameLayout
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:background="@drawable/back_btn_circular_background"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/gobackbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="-9dp"
+                        android:fontFamily="@font/notosans_semibold"
+                        android:gravity="center"
+
+                        android:text="k"
+                        android:textColor="@color/one"
+                        android:textSize="21sp" />
+                </LinearLayout>
+
+
+                <!-- <ImageView
+                     android:id="@+id/placeholder"
+                     android:layout_width="35dp"
+                     android:layout_height="35dp"
+                     android:layout_marginHorizontal="16dp"
+                     android:layout_marginVertical="16dp"
+                     android:background="@drawable/back_btn_circular_background"
+                     android:scaleType="centerCrop"
+                     android:src="@drawable/place_holder"
+                     android:visibility="gone" />-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/placeholder"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/back_btn_circular_background"
+                    android:visibility="gone"
+                    app:cardCornerRadius="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/fitcru_logo" />
+                </androidx.cardview.widget.CardView>
+            </FrameLayout>
+
+
+            <!--<ImageView
+                android:id="@+id/placeholder"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginVertical="16dp"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/back_btn_circular_background"
+                android:padding="9dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/de"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />-->
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right">
+
+                <ImageView
+                    android:id="@+id/filter_btn"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="16dp"
+                    android:background="@drawable/back_btn_circular_background"
+                    android:padding="8dp"
+                    android:src="@drawable/filter_icon_new"
+                    android:visibility="gone" />
+
+                <!--  <ImageView
+                      android:id="@+id/notifi_btn"
+                      android:layout_width="35dp"
+                      android:layout_height="35dp"
+                      android:layout_marginVertical="16dp"
+                      android:layout_marginEnd="16dp"
+                      android:background="@drawable/back_btn_circular_background"
+                      android:padding="5dp"
+                      android:src="@drawable/notification" />-->
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:layout_marginTop="65dp"
+            android:backgroundTint="@color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabIndicatorColor="@color/one"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/tab_text"
+            app:tabTextColor="@color/grey_text" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="140dp">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</layout>

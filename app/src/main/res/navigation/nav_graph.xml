@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nutrition_setup"
+    app:startDestination="@id/addMealFragment">
+
+    <fragment
+        android:id="@+id/addMealFragment"
+        android:name="com.fitness.fitnessCru.fragment.AddMealFragment"
+        android:label="AddMealFragment"
+        tools:layout="@layout/fragment_add_meal">
+        <action
+            android:id="@+id/action_addMealFragment_to_addMealFragment2"
+            app:destination="@id/addMealFragment2"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_addMealFragment_to_recipe"
+            app:destination="@id/recipeDetails"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_addMealFragment_to_studio_details"
+            app:destination="@id/studioDetails"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_sncProgramFragment"
+            app:destination="@id/sncProgramFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_myOrdersFragment"
+            app:destination="@id/myOrdersFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_addMealFragment_to_insightFragment"
+            app:destination="@id/insightFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_addMealFragment_to_planSelectTrainer"
+            app:destination="@id/planSelectTrainerFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_trainerProfileFragment"
+            app:destination="@id/trainerProfileFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_sessionCompletedFragment"
+            app:destination="@id/sessionCompletedFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_healthQuestionnaireFragment1"
+            app:destination="@id/healthQuestionnaireFragment1"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_appointmentFragment"
+            app:destination="@id/appointmentFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_coaching2"
+            app:destination="@id/coaching2"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_upcomingFragment"
+            app:destination="@id/upcomingFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true"
+
+            />
+        <action
+            android:id="@+id/action_addMealFragment_to_sncSessionFragment"
+            app:destination="@id/sncSessionFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_labTestFragment"
+            app:destination="@id/labTestFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_workoutByFitnessFragment"
+            app:destination="@id/workoutByFitnessFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_selectCoachTypeFragment"
+            app:destination="@id/selectCoachTypeFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_coachPlanDetailFragment"
+            app:destination="@id/coachPlanDetailFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_addMealFragment_to_notificationList"
+            app:destination="@id/notificationList"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMealFragment2"
+        android:name="com.fitness.fitnessCru.fragment.AddMealFragment"
+        android:label="AddMealFragment"
+        tools:layout="@layout/fragment_add_meal" />
+
+    <fragment
+        android:id="@+id/studioDetails"
+        android:name="com.fitness.fitnessCru.fragment.CardioFragment"
+        android:label="Studio Details"
+        tools:layout="@layout/fragment_cardio" />
+
+    <fragment
+        android:id="@+id/yogaFragment"
+        android:name="com.fitness.fitnessCru.fragment.YogaFragment"
+        android:label="Program"
+        tools:layout="@layout/fragment_yoga">
+        <action
+            android:id="@+id/action_yoga_to_s_n_c_program_fragment"
+            app:destination="@id/sncProgramFragment"
+            app:popUpTo="@id/addMealFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/recipeDetails"
+        android:name="com.fitness.fitnessCru.fragment.RecipeDetailFragment"
+        android:label="Recipe Details"
+        tools:layout="@layout/fragment_recipe_detail" />
+
+    <fragment
+        android:id="@+id/sncProgramFragment"
+        android:name="com.fitness.fitnessCru.fragment.SNCProgramFragment"
+        android:label="S&amp;C Program"
+        tools:layout="@layout/fragment_s_n_c_program">
+        <action
+            android:id="@+id/action_snc_program_to_snc_session"
+            app:destination="@id/sncSessionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sncSessionFragment"
+        android:name="com.fitness.fitnessCru.fragment.SNCSessionFragment"
+        android:label="S&amp;C Session"
+        tools:layout="@layout/fragment_s_n_c_session" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.fitness.fitnessCru.fragment.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" />
+    <fragment
+        android:id="@+id/myOrdersFragment"
+        android:name="com.fitness.fitnessCru.fragment.MyOrdersFragment"
+        android:label="MyOrdersFragment"
+        tools:layout="@layout/fragment_my_orders" />
+
+    <fragment
+        android:id="@+id/insightFragment"
+        android:name="com.fitness.fitnessCru.fragment.InsightFragment"
+        android:label="fragment_insight"
+        tools:layout="@layout/fragment_insight" />
+
+    <fragment
+        android:id="@+id/planSelectTrainerFragment"
+        android:name="com.fitness.fitnessCru.fragment.PlanSelectTrainerFragment"
+        android:label="fragment_plan_select_trainer"
+        tools:layout="@layout/fragment_plan_select_trainer">
+        <action
+            android:id="@+id/planSelectToTrainerProfile"
+            app:destination="@id/trainerProfileFragment" />
+        <action
+            android:id="@+id/action_planSelectTrainerFragment_to_planDetailedPageFragment"
+            app:destination="@id/planDetailedPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trainerProfileFragment"
+        android:name="com.fitness.fitnessCru.fragment.TrainerProfileFragment"
+        android:label="fragment_trainer_profile"
+        tools:layout="@layout/fragment_trainer_profile" />
+    <fragment
+        android:id="@+id/planDetailedPageFragment"
+        android:name="com.fitness.fitnessCru.fragment.PlanDetailedPageFragment"
+        android:label="PlanDetailedPageFragment"
+        tools:layout="@layout/fragment_plan_detailed_page">
+        <action
+            android:id="@+id/action_planDetailedPageFragment_to_healthQuestionnaireFragment1"
+            app:destination="@id/healthQuestionnaireFragment1" />
+    </fragment>
+    <fragment
+        android:id="@+id/healthQuestionnaireFragment1"
+        android:name="com.fitness.fitnessCru.fragment.HealthQuestionnaireFragment1"
+        android:label="HealthQuestionnaireFragment1"
+        tools:layout="@layout/fragment_health_questionnaire1" />
+    <fragment
+        android:id="@+id/sessionCompletedFragment"
+        android:name="com.fitness.fitnessCru.fragment.SessionCompletedFragment"
+        android:label="SessionCompletedFragment" />
+    <fragment
+        android:id="@+id/appointmentFragment"
+        android:name="com.fitness.fitnessCru.fragment.AppointmentFragment"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_appointment" />
+    <fragment
+        android:id="@+id/coaching2"
+        android:name="com.fitness.fitnessCru.fragment.Coaching"
+        android:label="Coaching" />
+    <fragment
+        android:id="@+id/upcomingFragment"
+        android:name="com.fitness.fitnessCru.fragment.UpcomingFragment"
+        android:label="fragment_upcoming"
+        tools:layout="@layout/fragment_upcoming" />
+    <fragment
+        android:id="@+id/labTestFragment"
+        android:name="com.fitness.fitnessCru.fragment.LabTestFragment"
+        android:label="LabTestFragment"
+        tools:layout="@layout/fragment_lab_test" />
+    <fragment
+        android:id="@+id/workoutByFitnessFragment"
+        android:name="com.fitness.fitnessCru.fragment.WorkoutByFitnessFragment"
+        android:label="WorkoutByFitnessFragment"
+        tools:layout="@layout/fragment_cardio" />
+    <fragment
+        android:id="@+id/selectCoachTypeFragment"
+        android:name="com.fitness.fitnessCru.fragment.SelectCoachTypeFragment"
+        android:label="fragment_select_coach_type"
+        tools:layout="@layout/fragment_select_coach_type" />
+    <fragment
+        android:id="@+id/coachPlanDetailFragment"
+        android:name="com.fitness.fitnessCru.fragment.CoachPlanDetailFragment"
+        android:label="fragment_coach_plan_detail"
+        tools:layout="@layout/fragment_coach_plan_detail" />
+    <fragment
+        android:id="@+id/notificationList"
+        android:name="com.fitness.fitnessCru.fragment.NotificationList"
+        android:label="fragment_notification_list"
+        tools:layout="@layout/fragment_notification_list" />
+
+</navigation>

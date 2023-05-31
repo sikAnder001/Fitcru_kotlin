@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="18dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/thumbnail_image_today_session"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/view_profile_img_icon" />
+
+        <ImageView
+            android:id="@+id/play_btn"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:src="@drawable/exo_ic_play_circle_filled"
+            app:tint="@color/grey_3" />
+
+        <TextView
+            android:id="@+id/today_session_views"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:background="@drawable/round_back"
+            android:fontFamily="@font/manrope_semibold"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            android:text="9.4k Views"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/background_"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/total_sessions_today_session"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/_6_session"
+                android:textColor="@color/offwhite"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/session_detail_today_session"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/manrope_semibold"
+                android:text="@string/s_amp_c_lower_body"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/duration_today_session"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_watch"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:gravity="center"
+                    android:text="1 Hr 30 Min"
+                    android:textColor="@color/offwhite"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/cal_today_session"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:drawableLeft="@drawable/ic_calory"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:gravity="center"
+                    android:text="@string/_448_cal"
+                    android:textColor="@color/offwhite"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/category_today_session"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:drawableLeft="@drawable/ic_intermediate"
+                    android:fontFamily="@font/manrope_semibold"
+                    android:gravity="center"
+                    android:text="@string/intermediate"
+                    android:textColor="@color/offwhite"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

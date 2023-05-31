@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/overlay_dark_90"
+        android:orientation="vertical"
+        tools:context=".activities.QaWorkoutVibeActivity">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_cons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/gobackbtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+                android:background="@drawable/back_btn_circular_background"
+                android:src="@drawable/back_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/skip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+
+                android:gravity="center"
+                android:text="@string/lbl_skip"
+                android:textColor="@color/overlay_light_60"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:overScrollMode="never">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/layoutTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@id/layoutTop"
+                    tools:layout_editor_absoluteX="30dp">
+
+                    <TextView
+                        android:id="@+id/titile_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/manrope_extrabold"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/what_is_your_workout_vibe"
+                        android:textColor="@color/white"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <!--  <TextView
+                          android:id="@+id/textView3"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="start"
+                          android:layout_marginLeft="20dp"
+                          android:layout_marginRight="20dp"
+                          android:fontFamily="@font/manrope_regular"
+                          android:gravity="center"
+                          android:text="@string/lbl_DietTypesubTitle"
+                          android:textColor="@color/overlay_light_50"
+                          android:textSize="18sp"
+                          android:textStyle="bold" />-->
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/workout_vibe_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical"
+                    android:overScrollMode="never"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circulor_button"
+                        android:padding="25dp"
+                        android:src="@drawable/next"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/progressIndicator"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_centerInParent="true"
+                        android:progress="100"
+                        app:indicatorColor="@color/two"
+                        app:indicatorSize="95dp"
+                        app:trackColor="@color/transparent_20"
+                        app:trackThickness="3dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

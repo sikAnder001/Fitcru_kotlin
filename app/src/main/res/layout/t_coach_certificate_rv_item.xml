@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/allNAll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/certificate_img"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:fontFamily="@font/manrope_semibold"
+            android:scaleType="fitXY"
+            android:src="@drawable/full_body_cardio" />
+
+        <TextView
+            android:id="@+id/certificate_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/manrope_medium"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="@string/certificat_detail1"
+            android:textColor="@color/offwhite"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

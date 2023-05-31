@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_for_bottom_sheet">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/add_address_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosans_semibold"
+            android:padding="5dp"
+            android:text="@string/add_new_address_not_plus"
+            android:textColor="@color/grey_10"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/crossBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cross_icon_for_bottom_sheet"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/add_address_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_container">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/items_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/address_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_profile_edit_text_bg"
+                android:fontFamily="@font/notosans_medium"
+                android:gravity="top"
+                android:hint="@string/address"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:maxHeight="156dp"
+                android:minHeight="156dp"
+                android:padding="8dp"
+                android:textColor="@color/grey_10"
+                android:textColorHint="@color/grey_20"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/location_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/edit_profile_edit_text_bg"
+                android:fontFamily="@font/notosans_medium"
+                android:gravity="start|fill"
+                android:hint="@string/locality"
+                android:imeOptions="actionNext"
+                android:inputType="textMultiLine"
+                android:maxHeight="60dp"
+                android:minHeight="60dp"
+                android:padding="8dp"
+                android:textColor="@color/grey_10"
+                android:textColorHint="@color/grey_20"
+                android:textSize="16sp" />
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/country_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_profile_edit_text_bg"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/notosans_medium"
+                android:maxHeight="60dp"
+
+                android:minHeight="60dp"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_text" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/landmark_et"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/notosans_medium"
+                    android:gravity="start|fill"
+                    android:hint="@string/landmark"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:maxWidth="170dp"
+                    android:maxHeight="60dp"
+                    android:minHeight="60dp"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_20"
+                    android:textSize="16sp" />
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/state_spinner"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:backgroundTint="@color/grey_text"
+                    android:fontFamily="@font/notosans_medium"
+                    android:maxHeight="60dp"
+                    android:minHeight="60dp"
+                    android:padding="8dp"
+                    android:theme="@style/mySpinnerItemStyle2" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                    android:id="@+id/city_spinner"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:backgroundTint="@color/grey_text"
+                    android:fontFamily="@font/notosans_medium"
+                    android:maxHeight="60dp"
+                    android:minHeight="60dp"
+                    android:padding="8dp"
+                    android:theme="@style/mySpinnerItemStyle2" />
+
+                <EditText
+                    android:id="@+id/pin_code_et"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_profile_edit_text_bg"
+                    android:fontFamily="@font/notosans_medium"
+                    android:gravity="start|fill"
+                    android:hint="@string/pincode"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxWidth="170dp"
+                    android:maxHeight="60dp"
+                    android:maxLength="6"
+                    android:minHeight="60dp"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/grey_10"
+                    android:textColorHint="@color/grey_20"
+                    android:textSize="16sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <EditText
+                android:id="@+id/mobile_et"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+
+                android:background="@drawable/edit_profile_edit_text_bg"
+                android:fontFamily="@font/notosans_medium"
+                android:gravity="start|fill"
+                android:hint="@string/mobile"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxHeight="60dp"
+                android:maxLength="10"
+                android:minHeight="60dp"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:textColor="@color/grey_10"
+                android:textColorHint="@color/grey_10"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/default_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosans_medium"
+                    android:padding="5dp"
+                    android:text="@string/default_text"
+                    android:textColor="@color/grey_10"
+                    android:textSize="16sp" />
+
+
+                <Switch
+                    android:id="@+id/default_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:gravity="center"
+                    android:track="@drawable/track_add_new_address" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/add_address_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/round_background_gradient"
+        android:fontFamily="@font/notosans_bold"
+        android:gravity="center"
+        android:minHeight="60dp"
+        android:text="@string/add_address"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

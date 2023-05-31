@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="185dp"
+    android:layout_marginHorizontal="3dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/round_back_transparent"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        app:cardCornerRadius="15dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fitnessImg"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/place_holder" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/notosans_bold"
+        android:gravity="center"
+        android:maxLines="2"
+        android:minLines="2"
+        android:text="@string/trainer_type"
+        android:textColor="@color/offwhite"
+        android:textSize="16sp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

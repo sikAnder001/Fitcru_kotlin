@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:layout_margin="5dp"
+    android:background="@drawable/round_back_transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:cardCornerRadius="15dp"
+
+
+        >
+
+        <ImageView
+            android:id="@+id/ivFitness"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:src="@drawable/squats" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/manrope_bold"
+        android:gravity="center"
+        android:text="@string/rookie"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/manrope_regular"
+        android:gravity="center"
+        android:maxLines="2"
+        android:minLines="2"
+        android:text="@string/traning_year_0_1"
+        android:textColor="@color/grey_40"
+        android:textSize="11sp" />
+</androidx.appcompat.widget.LinearLayoutCompat>

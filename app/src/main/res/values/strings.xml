@@ -1,0 +1,690 @@
+<resources>
+
+    <string name="app_name" translatable="false">Fitcru-OnDemand Fitness</string>
+    <string name="clients" translatable="false">CLIENTS</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="facebook_app_id" translatable="false">629095262112568</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb629095262112568</string>
+    <string name="facebook_client_token" translatable="false">361e9adabbf941c043e284b9297bfc88</string>
+    <string name="google_clientId" translatable="false">973118070884-lq4i61eg4ea37fs3eoqcn3mddtb1rtk3.apps.googleusercontent.com</string>
+    <string name="continue_" translatable="false">Continue</string>
+    <string name="lbl_login_email" translatable="false">Login with email</string>
+    <string name="lbl_login_mobile" translatable="false">Login with mobile</string>
+    <string name="lbl_splash_title" translatable="false">Fitness Made Simple</string>
+    <string name="lbl_login_title" translatable="false">Easily track your workout and diet activity.</string>
+    <string name="lbl_skip" translatable="false">SKIP</string>
+    <string name="lbl_OrLogin" translatable="false">OR LOGIN WITH</string>
+    <string name="lbl_letssignin" translatable="false">Let\'s Sign you in.</string>
+    <string name="lbl_signin_title" translatable="false">we are going to send you a verification code to confirm your identity</string>
+    <string name="lbl_height_weight_title" translatable="false">What\'s your Height &amp; Weight?</string>
+    <string name="lbl_height_weight_subtitle" translatable="false">To give you better experience we need to know your Height &amp; Weight</string>
+    <string name="lbl_whatbringsTitale" translatable="false">What brings you to Fitcru?</string>
+    <string name="lbl_whatbringsSubTitale" translatable="false">Based on this, we can assess your daily calorie requirements</string>
+    <string name="weight_loss" translatable="false">Weight Loss</string>
+    <string name="weightGain" translatable="false">Weight Gain</string>
+    <string name="GainMuscle" translatable="false">Gain Muscle</string>
+    <string name="overallfitness" translatable="false">Overall Fitness</string>
+    <string name="Lorem" translatable="false">Lorem Ipsum</string>
+    <string name="lbl_DietTypeTitle" translatable="false">What\'s your diet type?</string>
+    <string name="lbl_DietTypesubTitle" translatable="false">Based on this, we will provide you a curated workout and diet requirements</string>
+    <string name="Vegetarian" translatable="false">Vegetarian</string>
+    <string name="Non_Vegetarian" translatable="false">Non-Vegetarian</string>
+    <string name="Jain" translatable="false">Jain</string>
+    <string name="Vegan" translatable="false">Vegan</string>
+    <string name="Vegetarian_sub" translatable="false">No eggs , No meat</string>
+    <string name="Non_Vegetarian_sub" translatable="false">Egg, Meat , Pescatarian,</string>
+    <string name="Jain_sub" translatable="false">Vegetarian, No roots</string>
+    <string name="Vegan_sub" translatable="false">No animal products</string>
+    <string name="resend_code" translatable="false">Resend Code</string>
+    <string name="_000000" translatable="false">000000</string>
+    <string name="_9768757845" translatable="false">9768757845</string>
+    <string name="enter_the_6_digit_otp_sent_to_nto_proceed" translatable="false">Enter the 6 digit OTP sent to \nto proceed</string>
+    <string name="otp_verify" translatable="false">OTP Verify</string>
+    <string name="proceed" translatable="false">Proceed</string>
+    <string name="let_s_sign_you_in" translatable="false">Let’s Sign you in.</string>
+    <string name="we_re_going_to_send_you_a_verification_code_to_confirm_your_identity" translatable="false">We\'re going to send you a verification code to confirm your identity</string>
+    <string name="enter_mobile_number" translatable="false">Enter Mobile Number</string>
+    <string name="enter_valid_mobile_number" translatable="false">Enter Valid Mobile Number</string>
+    <string name="create_password" translatable="false">Create Password</string>
+    <string name="keep_it_safe" translatable="false">Will keep it safe.</string>
+    <string name="forget_password" translatable="false">Forgot password</string>
+    <string name="enter_email_id_associated_with_account" translatable="false">Enter the Email ID associated with your account.</string>
+    <string name="retype_pass" translatable="false">Re-type Password</string>
+    <string name="enter_email_id" translatable="false">Enter Email Id</string>
+
+    <string name="password" translatable="false">Password</string>
+    <string name="enter_your_password" translatable="false">Enter your password</string>
+    <string name="forgot_password" translatable="false">Forgot Password</string>
+    <string name="password_doesnot_match_pattern" translatable="false">Your Password does not match the pattern</string>
+    <string name="min_length" translatable="false">Password min length 8</string>
+    <string name="rookie" translatable="false">Rookie</string>
+    <string name="traning_year_0_1" translatable="false">0-1 year of traning</string>
+    <string name="traning_year_2_5" translatable="false">2-5 year of traning</string>
+    <string name="traning_year_5_10" translatable="false">5-10 year of traning</string>
+    <string name="traning_year_10" translatable="false">10+ year of traning</string>
+    <string name="intermediate" translatable="false">Intermediate</string>
+    <string name="pro" translatable="false">Pro</string>
+    <string name="elite" translatable="false">Elite</string>
+    <string name="fitness_level" translatable="false">How do you describe your fitness level?</string>
+    <string name="calorie_requirement" translatable="false">Based on this, we can  Assess your daily  calorie requirements</string>
+    <string name="title_activity_how_active" translatable="false">HowActiveActivity</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
+    <string name="skip_c" translatable="false">SKIP</string>
+    <string name="how_active" translatable="false">How active are you?</string>
+    <string name="little_no_acivity" translatable="false">Little or No Activity</string>
+    <string name="sitting_through_day" translatable="false">Sitting throughout the day</string>
+    <string name="verylight" translatable="false">Very light</string>
+    <string name="steps_0_5" translatable="false">0-5k steps</string>
+    <string name="light" translatable="false">Light</string>
+    <string name="steps_7" translatable="false">7k steps</string>
+    <string name="active" translatable="false">Active</string>
+    <string name="stepd_10" translatable="false">10k steps</string>
+    <string name="intense" translatable="false">Intense</string>
+    <string name="steps_15" translatable="false">15k steps</string>
+    <string name="very_intense" translatable="false">Very Intense</string>
+    <string name="steps_20" translatable="false">20k steps</string>
+    <string name="tell_us_about_you" translatable="false">Tell us about you?</string>
+    <string name="to_give_you_better_experience_we_n_need_to_know_your_age" translatable="false">To give you better experience we\n need to know your age</string>
+    <string name="select_your_birth_date" translatable="false">Select Your Birth Date</string>
+    <string name="what_s_your_gender" translatable="false">What\'s your gender?</string>
+    <string name="to_give_you_better_experience_we_n_need_to_know_your_gender" translatable="false">To give you better experience we\n need to know your gender</string>
+    <string name="title_activity_questionary_four" translatable="false">QuestionaryFour</string>
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="congratulations" translatable="false">Congratulations!</string>
+    <string name="you_have_completed_the_questionnaire_nwe_thank_you_for_your_patience" translatable="false">You have completed the questionnaire.\nwe thank you for your patience</string>
+    <string name="bmr" translatable="false">BMR</string>
+    <string name="tdee" translatable="false">TDEE</string>
+    <string name="fitcru_elite_plan" translatable="false">Fitcru Elite Plan</string>
+    <string name="come_on" translatable="false">Come on!</string>
+    <string name="phew_lets_drop_some_weight" translatable="false">Phew! lets drop some weight</string>
+    <string name="lets_get_you_fit_lets_pack_on_some_muscle" translatable="false">Lets get you fit. Lets pack on some Muscle</string>
+    <string name="payment" translatable="false">Payment</string>
+    <string name="cart" translatable="false">Cart</string>
+    <string name="card" translatable="false">Card</string>
+    <string name="view_plan_details" translatable="false">Select</string>
+    <string name="u20b9" translatable="false">₹</string>
+    <string name="_999" translatable="false">999</string>
+    <string name="month" translatable="false">/month</string>
+    <string name="select_subscription_plan" translatable="false">Select Plan</string>
+    <!--plan detail-->
+    <string name="Transform_Plan" translatable="false">Transform Plan</string>
+    <string name="Hereget" translatable="false">Here\'s what you get</string>
+    <string name="How_it_works" translatable="false">How it works</string>
+    <string name="Total" translatable="false">Total</string>
+    <string name="Price_Discount" translatable="false">Price Discount</string>
+    <string name="gst" translatable="false">CGST + SGST@18%</string>
+    <string name="Payable" translatable="false">Total Payable</string>
+    <string name="whowork_detail" translatable="false">In at iaculis lorem. Praesent tempor dictum llus ut molestie. Sed sed an ullamcorper lorem, id cibus odio lorem, id cibus odio…</string>
+    <string name="my_insights" translatable="false">My Insights</string>
+    <string name="schedule_appointments" translatable="false">Schedule Appointments</string>
+    <string name="my_orders" translatable="false">My Orders</string>
+    <string name="help_support" translatable="false">Help Support</string>
+    <string name="terms_and_conditions" translatable="false">Terms and Conditions</string>
+    <string name="privacy_policy" translatable="false">Privacy Policy</string>
+    <string name="weight" translatable="false">Weight</string>
+    <string name="bmi" translatable="false">BMI</string>
+    <string name="prashant_s" translatable="false">Prashant S</string>
+    <string name="_26_25" translatable="false">26.25</string>
+    <string name="edit_profile" translatable="false">Edit Profile</string>
+    <string name="first_name" translatable="false">Name</string>
+    <string name="mobile" translatable="false">Mobile</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="_91" translatable="false">+91</string>
+    <string name="_9876543210" translatable="false">9876543210</string>
+    <string name="prashant_gmail_com" translatable="false">prashant@gmail.com</string>
+    <string name="gender" translatable="false">Gender</string>
+    <string name="date_of_birth" translatable="false">Date of Birth</string>
+    <string name="save" translatable="false">Save</string>
+    <string-array name="gender" translatable="false">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+
+
+    <string-array name="unit">
+        <item>gm   </item>
+        <item>ml  </item>
+        <item>kcl  </item>
+    </string-array>
+
+    <string name="workout" translatable="false">Workout</string>
+    <string name="diet" translatable="false">Diet</string>
+    <string name="water" translatable="false">Water</string>
+    <string name="water1" translatable="false">Water (L)</string>
+    <string name="steps" translatable="false">Steps</string>
+    <string name="join_now" translatable="false">Join Now</string>
+    <string name="goals" translatable="false">Goals</string>
+    <string name="yoga" translatable="false">YOGA</string>
+    <string name="for_beginers" translatable="false">FOR BEGINERS</string>
+    <string name="trending_offers" translatable="false">Trending Offers</string>
+    <string name="_12_sessions" translatable="false">12 SESSIONS</string>
+    <string name="trending_packs" translatable="false">Trending Packs</string>
+    <string name="yoga_for_flexibility" translatable="false">YOGA FOR FLEXIBILITY</string>
+    <string name="fitcru_nelite" translatable="false">FITCRU\nELITE</string>
+    <string name="get_stared" translatable="false">Get Stared</string>
+    <string name="get_stared1" translatable="false">Get Started</string>
+    <string name="_15_session" translatable="false">15 Session</string>
+    <string name="quality_trainers" translatable="false">Quality Trainers</string>
+    <string name="to_provide_you_best_personal_experience" translatable="false">To provide you best personal experience</string>
+    <string name="our_happy_customers" translatable="false">Our Happy Customers</string>
+    <string name="lost_2_kgs_in_10_days" translatable="false">Lost 2 KGs in 10 days</string>
+    <string name="ben_parker" translatable="false">Ben Parker</string>
+    <string name="in_at_iaculis_lorem_praesent_tempor_dictum_tellus_ut_molestie_sed_sed_ullamcorper_lorem" translatable="false">In at iaculis lorem. Praesent tempor dictum tellus ut molestie. Sed sed ullamcorper lorem.</string>
+    <string name="wellness_title" translatable="false">IMPROVE YOUR POSTURE</string>
+    <string name="wellness_sub_title" translatable="false">FULL-BODY WORKOUT</string>
+    <string name="trendsession" translatable="false">Trending Sessions</string>
+    <string name="whatscooking" translatable="false">What\'s Cooking Today</string>
+    <string name="transformation" translatable="false">Transformation</string>
+    <string name="please_enter_correct_email" translatable="false">Please Enter correct email</string>
+    <string name="please_enter_email" translatable="false">Please Enter Email</string>
+    <string name="please_enter_mobile" translatable="false">Please Enter Number</string>
+    <string name="please_enter_mobile_lenght" translatable="false">Number length should be 10 digit</string>
+    <string name="enter_old_password" translatable="false">Enter Old Password</string>
+    <string name="create_new_password" translatable="false">Create New Password</string>
+    <string name="confirm_password" translatable="false">Confirm Password</string>
+    <string name="update_password" translatable="false">Update Password</string>
+    <string name="please_enter_password" translatable="false">Please Enter Password</string>
+    <string name="please_enter_new_npassword" translatable="false">Please Enter New Password</string>
+    <string name="please_enter_confirm_npassword" translatable="false">Please Enter Confirm Password</string>
+    <string name="title_activity_login" translatable="false">LoginActivity</string>
+    <string name="prompt_email" translatable="false">Email</string>
+    <string name="prompt_password" translatable="false">Password</string>
+    <string name="action_sign_in" translatable="false">Sign in or register</string>
+    <string name="action_sign_in_short" translatable="false">Sign Up</string>
+    <string name="welcome" translatable="false">"Welcome !"</string>
+    <string name="invalid_username" translatable="false">Not a valid username</string>
+    <string name="invalid_password" translatable="false">Password must be >5 characters</string>
+    <string name="login_failed" translatable="false">"Login failed"</string>
+    <string name="mobilenumber" translatable="false">Mobile Number</string>
+    <string name="orsihnin" translatable="false">Or sign in with</string>
+    <string name="forgotpass" translatable="false">Forgot Password?</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="loginsub" translatable="false">Easily track your workout</string>
+    <string name="let_s_log_you_in" translatable="false">Let’s Log you in.</string>
+    <string name="password_and_confirm_password_not_match" translatable="false">Password and confirm password not match</string>
+    <string name="please_enter_name" translatable="false">Please Enter Name</string>
+    <string name="please_enter_mobile_number" translatable="false">Please Enter Phone Number</string>
+    <string name="sign_in_with_email" translatable="false">Sign Up with email</string>
+    <string name="sign_in_with_mobile" translatable="false">Sign Up with mobile</string>
+    <string name="password_doesnot_match" translatable="false">Password does\'t match</string>
+    <string name="new_password_must_be_not_same" translatable="false">New password must not be same as old password</string>
+    <string name="mobile_number_must_have_10_digits" translatable="false">Mobile number must have 10 digits</string>
+    <string name="password_must_be_8_digits" translatable="false">Password must be 8 digits or greater</string>
+    <string name="email_verify" translatable="false">Verify Email</string>
+    <string name="enter_the_6_digit_code_sent_to_nto_proceed" translatable="false">Enter the 6 digit code sent to</string>
+    <string name="_emailidverification" translatable="false"><html><font color="#fff" size="2" translatable="false"><b>%1$s</b></font></html></string>
+    <string name="password_not_matched" translatable="false">Password doesn\'t match</string>
+    <string name="mealtypebreakfast" translatable="false">BreakFast</string>
+    <string name="mealbenefit" translatable="false">Benefit</string>
+    <string name="edit" translatable="false">Edit</string>
+    <string name="what_is_your_workout_vibe" translatable="false">What is your workout vibe?</string>
+    <string name="benefits" translatable="false">Benefits</string>
+    <string name="goals_program" translatable="false">Goals Program</string>
+    <string name="these_easy_oats_idli_are_light_fluffy_cakes_perfect_for_a_quick_breakfast_or_healthy_on_the_go_snack" translatable="false">These easy oats idli are light, fluffy, cakes perfect for a quick breakfast or healthy on-the-go snack.</string>
+    <string name="_20mins" translatable="false">20mins</string>
+    <string name="oats_idli" translatable="false">Oats Idli</string>
+    <string name="breakfast" translatable="false">BreakFast</string>
+    <string name="_1_serving" translatable="false">1 Serving</string>
+    <string name="prep_time" translatable="false">Prep Time</string>
+    <string name="how_to_make" translatable="false">How to make</string>
+    <string name="healthy" translatable="false">#Healthy</string>
+    <string name="cardio" translatable="false">Cardio</string>
+    <string name="_185_sessions" translatable="false">185 Sessions</string>
+    <string name="_9_4k_views" translatable="false">9.4k Views</string>
+    <string name="paul_grand" translatable="false">Paul Grand</string>
+    <string name="choose_to_lose_cardio" translatable="false">Choose to lose: CARDIO</string>
+    <string name="_1_hr_30_min" translatable="false">1 Hr 30 Min</string>
+    <string name="allStudio" translatable="false">All Studios</string>
+    <string name="allFormats" translatable="false">All Formats</string>
+    <string name="newCollections" translatable="false">New Collections</string>
+    <string name="workoutByIntensity" translatable="false">Workouts By Intensity</string>
+    <string name="popularCollections" translatable="false">Popular Collections</string>
+    <string name="tranWithBestCoaches" translatable="false">Train With The Best- Coaches</string>
+    <string name="monthselite_pass" translatable="false">12 Months Fitcru Pass Elite</string>
+    <string name="strike" translatable="false"><strike>₹9999</strike></string>
+    <string name="howtomake" translatable="false">How to make</string>
+    <string name="trainwith" translatable="false">Train With The Best- Coaches</string>
+    <string name="allstudio_sub" translatable="false">FULL BODY CARDIO</string>
+    <string name="allformat" translatable="false">All Formats</string>
+    <string name="sessions" translatable="false">7 Sessions</string>
+    <string name="chest" translatable="false">Chest</string>
+    <string name="forbeginners" translatable="false">For Beginners</string>
+    <string name="new_yoga_programs" translatable="false">New yoga programs</string>
+    <string name="_6_session" translatable="false">6 session</string>
+    <string name="s_amp_c_lower_body" translatable="false"><![CDATA[S&C Lower Body]]></string>
+    <string name="_448_cal" translatable="false">448 Cal</string>
+    <string name="s_amp_c_program" translatable="false"><![CDATA[S&C Program]]></string>
+    <string name="avg_burns" translatable="false">Avg Burns</string>
+    <string name="_165_kcal" translatable="false">165 kcal</string>
+    <string name="duration" translatable="false">Duration</string>
+    <string name="sessions2" translatable="false">Sessions</string>
+    <string name="_1hr" translatable="false">1hr</string>
+    <string name="day_1" translatable="false">Day 1</string>
+    <string name="add_to_library" translatable="false">Add to library</string>
+    <string name="warmup" translatable="false">Warm Up</string>
+    <string name="mainworkout" translatable="false">Main Workout</string>
+    <string name="_30_min_hit_interval_training_blast" translatable="false">30- Min HIT: Interval - Training Blast</string>
+    <string name="with_prateek_kumar" translatable="false">With Prateek Kumar</string>
+    <string name="interval_training_has_never_burnt_so_good_your_drills_get_slightly_harder_while_your_working_intervals_get_shorter_so_you_won_t_get_bored_just_fired_up" translatable="false">Interval Training has never burnt so good. Your drills get slightly harder while your working intervals get shorter, so you won\'t get bored- just fired up.</string>
+    <string name="start_workout" translatable="false">Start Workout</string>
+    <string name="start_whiteboard_workout" translatable="false">Start Whiteboard Workout</string>
+    <string name="_30_mins_beginner" translatable="false">30 Mins, Beginner</string>
+    <string name="d" translatable="false">D</string>
+    <string name="session_completed" translatable="false">Session Completed!</string>
+    <string name="_33_06_min" translatable="false">33:06 Min</string>
+    <string name="_229_cal" translatable="false">229 Cal</string>
+    <string name="mon_sep_28" translatable="false">Mon Sep 28</string>
+    <string name="_09_00_am" translatable="false">09:00 AM</string>
+    <string name="_45_min" translatable="false">45 Min</string>
+    <string name="rate_session" translatable="false">Rate Session</string>
+    <string name="feedback" translatable="false">Feedback</string>
+    <string name="add_your_feedback_here" translatable="false">Add your Feedback here</string>
+    <string name="personal_record" translatable="false">Personal Record</string>
+    <string name="kg" translatable="false">Kg</string>
+    <string name="lbs" translatable="false">LBS</string>
+    <string name="share" translatable="false">Share</string>
+    <string name="easy" translatable="false">Easy</string>
+    <string name="forward_lunges" translatable="false">Forward Lunges</string>
+    <string name="alternating" translatable="false">Alternating</string>
+    <string name="_10" translatable="false">10</string>
+    <string name="reps" translatable="false">Reps</string>
+    <string name="submit" translatable="false">Submit</string>
+    <string name="today_calorie" translatable="false">Todays Calorie Remaining</string>
+    <string name="my_summary" translatable="false">My Summary</string>
+    <string name="deficit" translatable="false">Deficit</string>
+    <string name="consumed" translatable="false">Consumed</string>
+    <string name="burnt" translatable="false">Burnt</string>
+    <string name="detailed_stats" translatable="false">Detailed Stats</string>
+    <string name="meals" translatable="false">Meals</string>
+    <string name="two_meals" translatable="false">2 Meals</string>
+    <string name="tenthousand" translatable="false">10000 Steps</string>
+    <string name="steps_day" translatable="false">6369 Steps / Day</string>
+    <string name="sleep" translatable="false">Sleep</string>
+    <string name="eight_hours" translatable="false">8 Hours</string>
+    <string name="hours_day" translatable="false">6.2 Hours / Day</string>
+    <string name="leter" translatable="false">Ltr</string>
+    <string name="gainkg" translatable="false">Gain 2.3 KG</string>
+    <string name="gainpointpoint" translatable="false">0.0 of 2.3 Gained</string>
+    <string name="metrics" translatable="false">Metrics</string>
+    <string name="weighvalue" translatable="false">64.5 kgs</string>
+    <string name="height" translatable="false">Height</string>
+    <string name="heightvalue" translatable="false">167.6 cm</string>
+    <string name="bmivalue" translatable="false">29</string>
+    <string name="streak" translatable="false">Streak</string>
+    <string name="days" translatable="false">0 days</string>
+    <string name="best_four" translatable="false">Best 4</string>
+    <string name="body_fat" translatable="false">Body Fat %</string>
+    <string name="fatpercent" translatable="false">21%</string>
+    <string name="muscle_mass" translatable="false">Muscle Mass %</string>
+    <string name="muscle_mass_value" translatable="false">76%</string>
+    <string name="metabolic_age" translatable="false">Metabolic Age</string>
+    <string name="metabolicage_value" translatable="false">27</string>
+    <string name="body_score" translatable="false">Body Score</string>
+    <string name="body_score_value" translatable="false">1.36%</string>
+    <string name="plusaddmeal" translatable="false">+Add Meal</string>
+    <string name="select_time" translatable="false">Select Time</string>
+    <string name="meal_type" translatable="false">Select Meal Type</string>
+    <string name="food_name" translatable="false">Add Food Name</string>
+    <string name="add_weight" translatable="false">Add Weight</string>
+    <string name="g" translatable="false">g</string>
+    <string name="_250kcal" translatable="false">250Kcal</string>
+    <string name="update" translatable="false">Update</string>
+    <string name="add_meal" translatable="false">Add Meal</string>
+    <string name="burger_fries" translatable="false">Burger And Fries with Mayonnaise</string>
+    <string name="download" translatable="false">Download Plan</string>
+    <string name="toproceed" translatable="false">to Proceed</string>
+    <string name="week_1" translatable="false">Week</string>
+    <string name="_5_weeks" translatable="false">0 Weeks</string>
+    <string name="_0_653_cal" translatable="false">0/653 Cal</string>
+    <string name="done" translatable="false">Done</string>
+    <string name="filter" translatable="false">Filter</string>
+    <string name="apply" translatable="false">Apply</string>
+    <string name="add_food" translatable="false">Add Food</string>
+    <string name="fitness_amp_nutrition_coaching" translatable="false"><![CDATA[Fitness & Nutrition Coaching]]></string>
+    <string name="certified_coaches" translatable="false">Certified Coaches</string>
+    <string name="_3999_1_month" translatable="false">3999/ 1 Month</string>
+    <string name="_4999_1_month" translatable="false">4999/ 1 Month</string>
+    <string name="get_a_coach" translatable="false">GET A COACH</string>
+    <string name="get_a_coach2" translatable="false">Get a coach</string>
+    <string name="lifestyle_coaching" translatable="false">Coaching</string>
+    <string name="_76" translatable="false">76</string>
+    <string name="target_weight" translatable="false">Target Weight</string>
+    <string name="ft" translatable="false">Ft</string>
+    <string name="_5_10" translatable="false">5.10</string>
+    <string name="food_preference" translatable="false">Food Preference</string>
+    <string name="vegetarian" translatable="false">Vegetarian</string>
+    <string name="fitness_level_edit" translatable="false">Fitness Level</string>
+    <string name="daily_activity" translatable="false">Daily Activity</string>
+    <string name="active_10k_15k_steps_daily" translatable="false">Active (10K - 15k Steps Daily)</string>
+    <string name="your_goal" translatable="false">Your Goal</string>
+    <string name="lose_weight" translatable="false">Lose Weight</string>
+    <string name="Please_enter_you_DOB" translatable="false">Please enter you DOB</string>
+    <string name="plan_deatils" translatable="false">Plan Details</string>
+    <string name="_3_month_fitness_amp_nutrition_coaching" translatable="false"><![CDATA[3-Month Fitness & Nutrition Coaching.]]></string>
+    <string name="_4_899" translatable="false">4,899</string>
+    <string name="price_discount" translatable="false">Price Discount</string>
+    <string name="cgst_sgst_18" translatable="false">CGST + SGST@18%</string>
+    <string name="total_payable" translatable="false">Total Payable</string>
+    <string name="times_per_week" translatable="false">Times per week</string>
+    <string name="daily" translatable="false">Daily</string>
+    <string name="difficulty" translatable="false">Difficulty</string>
+    <string name="beginner" translatable="false">Beginner</string>
+    <string name="customizable_diet_plan" translatable="false">Customizable Diet Plan</string>
+    <string name="buy_now" translatable="false">Buy Now</string>
+    <string name="coach_selected_with_the_plan" translatable="false">Coach selected with the plan</string>
+    <string name="fitness_amp_nutrition_coaches" translatable="false"><![CDATA[Fitness & Nutrition Coaches]]></string>
+    <string name="recommend_coach" translatable="false">We recommend the best for you</string>
+    <string name="coach_rating" translatable="false">3.4</string>
+    <string name="coach_name" translatable="false">Coach Name</string>
+    <string name="coach_location" translatable="false">USA</string>
+    <string name="book_now" translatable="false">Book Now</string>
+    <string name="slots_avalable" translatable="false">Slots Available</string>
+    <string name="select_coach" translatable="false">Select A Coach</string>
+    <string name="weight_loss_expert" translatable="false">Weight Loss Expert</string>
+    <string name="jointhecru" translatable="false">#JointheCru</string>
+    <string name="selected" translatable="false">Selected</string>
+    <string name="_06" translatable="false">06</string>
+    <string name="harsh_mehat" translatable="false">Harsh Mehta</string>
+    <string name="trainer_location" translatable="false">(Australia)</string>
+    <string name="trainer_detail" translatable="false">In at iaculis lorem. Praesent tempor dict tellus ut molestie. Sed sed ullamcorper lorem, id faucibus odio. In at iaculis lorem. Praesent tempor dictum tellus ut molestie.</string>
+    <string name="trainer_qualifcation" translatable="false"><![CDATA[M.Sc Nutrition Experience & Dietetics]]></string>
+    <string name="alarm_time" translatable="false">1:10 IST</string>
+    <string name="ratings" translatable="false">125 Ratings</string>
+    <string name="specialization" translatable="false">My Specialization</string>
+    <string name="no_specialization" translatable="false">No Specializations!</string>
+    <string name="strength" translatable="false">Strength</string>
+    <string name="stamina" translatable="false">Stamina</string>
+    <string name="my_certificate" translatable="false">My Certificates</string>
+    <string name="no_certificate" translatable="false">No Certificates!</string>
+    <string name="certificat_detail" translatable="false">Expert Course INFS</string>
+    <string name="certificat_detail1" translatable="false">Foundation Course INFS</string>
+    <string name="reviews" translatable="false">Reviews</string>
+    <string name="username" translatable="false">\@ketan_maho</string>
+    <string name="confirm" translatable="false">Confirm</string>
+    <string name="link_fitness_devices" translatable="false">Link Fitness Devices</string>
+    <string name="eat_fit" translatable="false">Eat Fit</string>
+    <string name="change" translatable="false"><Html><u>Change</u></Html></string>
+    <string name="delivery_in_25_minutes" translatable="false">Delivery in 25 minutes</string>
+    <string name="your_order" translatable="false">Your Order</string>
+    <string name="add_address" translatable="false">Add Address</string>
+    <string name="what_is_the_reason_that_you_want_to_sign_up_for_1_1_coaching" translatable="false">What is the reason that you want to sign up for 1-1 coaching?</string>
+    <string name="as_a_part_of_our_coaching_process_we_really_believe_in_finding_out_the_true_reason_for_a_change_please_be_honest_with_us_we_will_not_share_this_with_anyone_but_help_you_stay_motivated_to_this_reason" translatable="false">As a part of our coaching process, we really believe in finding out the true reason for a change. Please be honest with us. We will not share this with anyone, but help you stay motivated to this reason.</string>
+    <string name="to_calculate_an_approximate_body_fat_percentage_we_require_your" translatable="false">To calculate an approximate body fat percentage we require your</string>
+    <string name="do_you_have_any_medical_conditions" translatable="false">Do you have any medical conditions ?</string>
+    <string name="what_are_your_dietary_allergies" translatable="false">What are your dietary allergies?</string>
+    <string name="what_are_your_preferred_cuisines_10_it_is_important_to_have_food_that_you_prefer_throughout_this_journey_so_that_you_can_always_see_continuous_progress" translatable="false">What are your preferred cuisines ?\n(It is important to have food that you prefer throughout this journey so that you can always see continuous progress.</string>
+    <string name="what_is_your_preferred_style_of_nutrition" translatable="false">What is your preferred style of nutrition?</string>
+    <string name="how_many_meals_do_you_consume_amp_at_approx_what_time" translatable="false"><![CDATA[How many meals do you consume & at approx what time ?]]></string>
+    <string name="what_is_the_macronutrient_split_you_would_like_try_out_10_we_can_always_change_it_our_coaches_will_also_recommend_the_same_on_the_consult_call" translatable="false">What is the macronutrient split you would like try out?\n(We can always change it, our coaches will also recommend the same on the consult call)</string>
+    <string name="order_is_placed" translatable="false">Order is Placed</string>
+    <string name="your_payment_is_confirmed" translatable="false">Your Payment is Confirmed</string>
+    <string name="add_new_address" translatable="false">+ Add New Address</string>
+    <string name="add_new_address_not_plus" translatable="false">Add New Address</string>
+    <string name="address" translatable="false">Address</string>
+    <string name="vivamus_eget_aliquam_dui_integer_eu_arcu_vel_arcu_suscipit" translatable="false">Vivamus Eget Aliquam Dui. Integer Eu Arcu Vel Arcu Suscipit</string>
+    <string name="locality" translatable="false">Locality</string>
+    <string name="landmark" translatable="false">Landmark</string>
+    <string name="state" translatable="false">State</string>
+    <string name="pincode" translatable="false">Pincode</string>
+    <string name="default_text" translatable="false">default</string>
+    <string name="activity_goals" translatable="false">Activity Goals</string>
+    <string name="bed_time" translatable="false">Bed Time</string>
+    <string name="wake_up_time" translatable="false">Wake Up Time</string>
+    <string name="search_by_dish" translatable="false">Search by Dish</string>
+    <string name="butter_chicken_burger" translatable="false">Butter Chicken Burger</string>
+    <string name="_340" translatable="false">340</string>
+    <string name="high_protein" translatable="false">High Protein</string>
+    <string name="_08_feb_2022_at_12_16pm" translatable="false">08 feb 2022 at 12:16PM</string>
+    <string name="reorder" translatable="false">Reorder</string>
+    <string name="my_reminders" translatable="false">My Reminders</string>
+    <string name="lunch" translatable="false">Lunch</string>
+    <string name="lorem_ipsum_lorem_ipsum" translatable="false">Lorem Ipsum Lorem Ipsum</string>
+    <string name="_1_10_pm" translatable="false">1:10 PM</string>
+    <string name="delay" translatable="false">Delay</string>
+    <string name="set_reminder" translatable="false">Set Reminder</string>
+    <string name="add_title" translatable="false">Add Title</string>
+    <string name="remind_me_to_short_note" translatable="false">Remind Me to (Short Note)</string>
+    <string name="add_time" translatable="false">Add Time</string>
+    <string name="remind_me_before" translatable="false">Remind Me Before</string>
+    <string name="time" translatable="false">Time</string>
+    <string name="time_duration" translatable="false">2 hour ago</string>
+    <string name="date" translatable="false">Date</string>
+    <string name="notify_title" translatable="false">cancel appointment</string>
+    <string name="notify_mess" translatable="false">Your appointment has been cancelled</string>
+    <string name="notifications" translatable="false">Notifications</string>
+    <string-array name="state" translatable="false">
+        <item>State</item>
+        <item>Uttar Pradesh</item>
+    </string-array>
+    <string-array name="city" translatable="false">
+        <item>City</item>
+        <item>1</item>
+        <item>3</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="kg1" translatable="false">
+        <item>Kg</item>
+    </string-array>
+    <string-array name="water" translatable="false">
+        <item>ml</item>
+    </string-array>
+    <string-array name="repeat" translatable="false">
+        <item>Repeat : No Repeat</item>
+        <item>Repeat : Repeat</item>
+    </string-array>
+    <string name="today_menu" translatable="false">Today\'s Menu For You</string>
+    <string name="cuisines" translatable="false">Cuisines</string>
+    <string name="chinese" translatable="false">Chinese</string>
+    <string name="dishes" translatable="false">69 Dishes</string>
+    <string name="eatnow" translatable="false">Eat Now</string>
+    <string name="high_proein" translatable="false">High Protein</string>
+    <string name="strike2" translatable="false"><strike>₹450</strike></string>
+    <string name="proteins" translatable="false">Proteins</string>
+    <string name="fats" translatable="false">Fats</string>
+    <string name="zerog" translatable="false">0g</string>
+    <string name="carbs" translatable="false">Carbs</string>
+    <string name="carbg" translatable="false">120g</string>
+    <string name="add" translatable="false">ADD</string>
+    <string name="foodname" translatable="false">Griller Sandvich Burger</string>
+    <string name="sugar" translatable="false">Sugar</string>
+    <string name="fiber" translatable="false">Fiber</string>
+    <string name="energy" translatable="false">Energy</string>
+    <string name="membershipplan" translatable="false">Membership Plan</string>
+    <string name="package_name" translatable="false">Gold Package</string>
+    <string name="days_left" translatable="false">15 Days Left</string>
+    <string name="startdate" translatable="false">Start Date</string>
+    <string name="dated" translatable="false">11 Apr 2022</string>
+    <string name="enddate" translatable="false">End Date</string>
+    <string name="compassionate" translatable="false">Compassionate</string>
+    <string name="senior_citizen" translatable="false">Senior Citizen</string>
+    <string name="need_help" translatable="false">Need Help?</string>
+    <string name="request_a_callback_to_get_your_queries_answered" translatable="false">Request a callback to get your queries answered</string>
+    <string name="get_in_touch" translatable="false">Get in Touch</string>
+    <string name="frequently_asked_questions" translatable="false">Frequently Asked Questions</string>
+    <string name="what_is_fitcru_coaching" translatable="false">What is FitCru Coaching ?</string>
+    <string name="a_platform_where_you_as_a_client_can_select_from_fitness_coaches_dietician_s_and_mental_health_coaches_or_have_a_combination_of_2_or_all_weather_it_s_just_fitness_or_holistic_health_goals_require_skilled_coaches_and_at_fitcru_we_do_just_that_our_trained_and_qualified_coaches_are_ready_to_get_you_to_your_goals_as_a_client_our_world_class_coaching_team_will_be_there_to_guide_and_support_you_every_step_of_the_way_so_you_can_learn_how_to" translatable="false">A platform where you as a client can select from fitness coaches , dietician’s and mental health coaches, or have a combination of 2 or all. Weather it’s just fitness or holistic health, goals require skilled coaches, and at fitcru we do just that.\n\n Our trained and qualified coaches are ready to get you to your goals. \n\nAs a client our world-class coaching team will be there to guide and support you every step of the way, so you can learn how to:</string>
+    <string name="yes_at_fitcru_you_can_select_a_fitness_coach_to_give_you_any_kind_of_workout_programs_and_nutritional_guidance_to_help_you_get_closer_to_your_physical_fitness_goals_if_you_re_diagnosed_with_any_medical_ailment_then_we_recommended_taking_a_combination_of_fitness_coach_s_and_diet_coaches_if_you_re_facing_any_mental_health_isssues_then_just_like_fitness_or_diet_coaches_you_can_also_select_a_mental_health_coach_to_help_you_overcome_issues_and_reach_holistic_fitness" translatable="false">Yes, at fitcru, you can select a fitness coach to give you any kind of workout programs , and nutritional guidance to help you get closer to your physical fitness goals. If you’re diagnosed with any medical ailment then we recommended taking a combination of fitness coach’s and diet coaches. \nIf you’re facing any mental health isssues, then just like fitness or diet coaches , you can also select a mental health coach to help you overcome issues and reach holistic fitness.</string>
+    <string name="yes_we_are_a_client_centric_company_we_store_your_data_and_share_it_only_with_you_and_your_coach_your_coaches_have_signed_an_nda_and_a_contact_to_ensure_they_do_not_share_any_personal_information_on_social_media_or_anywhere_else_without_your_written_consent" translatable="false">Yes, we are a client centric company. We store your data and share it only with you and your coach. Your coaches have signed an NDA and a contact to ensure they do not share any personal information on social media or anywhere else , without your written Consent.</string>
+    <string name="yes_you_can_select_one_two_or_any_number_of_coaches_as_needed_a_coach_is_a_skilled_professional_who_will_help_you_with_the_right_tools_to_make_the_right_choices_in_life_and_get_you_closer_to_your_goals" translatable="false">Yes, you can select one , two or any number of coaches as needed. A coach is a skilled professional who will help you with the right tools to make the right choices in life and get you closer to your goals.</string>
+    <string name="select_the_coach_and_duration_of_the_plan_fill_up_a_health_questionnaire_after_the_purchase_of_the_plan_select_a_date_and_time_of_your_first_consultation_with_your_coach_once_your_coach_consult_calm_is_done_you_coach_will_have_all_the_information_required_about_your_dietary_preferences_and_allergies_workout_preferences_life_commitments_work_commitments_etc_your_coaches_will_create_a_program_for_you_which_is_sustainable_and_easily_executable_for_you" translatable="false">Select the coach and duration of the plan. Fill up a health questionnaire after the purchase of the plan. Select a date and time of your first consultation with your coach.\n Once your coach consult calm is done, you coach will have all the information required about your dietary preferences and allergies , workout preferences , life commitments, work commitments etc. \nyour coaches will create a program for you which is sustainable and easily executable for you.</string>
+    <string name="based_on_your_requirements_budget_choice_of_experienced_coaches_and_location_you_can_search_any_coach_you_want_from_our_elite_roster_you_can_select_any_number_of_coaches_from_different_categories_to_form_and_structure_your_fitness_journey" translatable="false">Based on your requirements, budget, choice of experienced coaches and location you can search any coach you want from our elite roster. \nYou can select any number of coaches from different categories to form and structure your fitness journey</string>
+    <string name="yes_once_you_start_you_can_change_your_coach_within_15_days_from_any_coach_in_the_same_category_or_you_can_upgrade_to_a_higher_category_more_experienced_coach_data_from_your_consult_call_is_recorded_and_shared_with_the_new_coach_only_once_you_change_the_coach" translatable="false">Yes once you start you can change your coach within 15. Days, from any coach in the same category or you can upgrade to a higher category, more experienced coach. \nData from your consult call is recorded and shared with the new coach only once you change the coach.</string>
+    <string name="yes_with_our_nutrition_coaches_dietician_s_you_can_get_the_best_and_the_most_sound_diet_plans_for_you_they_will_be_convenient_and_easy_to_manage_our_coaches_are_qualified_to_prescribe_the_right_supplementation_if_you_re_willing_or_require_to_consume" translatable="false">Yes with our nutrition coaches / dietician’s you can get the best and the most sound diet plans for you. They will be convenient and easy to manage. Our coaches are qualified to prescribe the right supplementation if You’re willing or require to consume.</string>
+    <string name="nutrition_coaching_allows_clients_to_get_weekly_menus_and_habit_coaching_it_will_make_deciding_what_s_to_eat_and_when_to_eat_extremely_easy_our_menus_have_the_exact_portions_that_you_need_to_consume_not_only_do_we_work_on_your_food_habits_with_a_simple_and_sustainable_meal_plan_but_we_also_equip_you_to_get_independent_to_choose_better_foods_and_get_healthier_by_teaching_you_how_to" translatable="false">Nutrition coaching allows clients to get weekly menus, and habit coaching. \n\nIt will make deciding what’s to eat and when to eat extremely easy. Our menus have the exact portions that you need to consume. Not only do we work on your food habits with a simple and sustainable meal plan but we also equip you to get independent to choose better foods and get healthier by teaching you how to-</string>
+    <string name="we_will_provide_you_with_a_nutrition_plan_which_will_provide_your_body_with_all_the_macro_nutrients_micro_nutrients_phytonutrients_myconutrients_and_zoo_nutrients_we_will_also_guide_you_on_the_amount_of_water_or_supplements_you_require_n_nthere_is_always_a_way_to_make_it_better" translatable="false">We will provide you with a nutrition plan which will provide your body with all the macro nutrients, micro nutrients , phytonutrients, myconutrients and zoo nutrients . We will also guide you on the amount of water or supplements you require.\n\nThere is always a way to make it better</string>
+    <string name="three_months" translatable="false">3 Months</string>
+    <string name="schedule" translatable="false">Schedule</string>
+    <string name="month_name" translatable="false">Jan</string>
+    <string name="availalable_slot" translatable="false">Available Time Slots</string>
+    <string name="book_appointment" translatable="false">Book Appointment</string>
+    <string name="pay_8888" translatable="false">PAY ₹ </string>
+    <string name="seconds" translatable="false">10:00 Sec</string>
+    <string name="my_coach" translatable="false">My Coaches</string>
+    <string name="chat" translatable="false">Chat</string>
+    <string name="set" translatable="false">Set</string>
+    <string name="one" translatable="false">1</string>
+    <string name="running" translatable="false">Running</string>
+    <string name="upcoming_appointment" translatable="false">Upcoming Appointments</string>
+    <string name="deactivate_account" translatable="false">Deactivate Account</string>
+    <string name="delete_account" translatable="false">Delete Account</string>
+    <string name="rest" translatable="false">Rest</string>
+    <string name="youtube_api" translatable="false">AIzaSyAMVZHqg70ZX3-4wiluws2_-Ri4YkHwvDE</string>
+    <string name="whatsapp_mobile_no" translatable="false">+919920322333</string>
+    <string name="total_time" translatable="false">Total time</string>
+    <string name="start_coaching" translatable="false">Start Coaching</string>
+    <string name="habit" translatable="false">Habit</string>
+    <string name="habitName" translatable="false">Drink Water</string>
+
+    <string name="select_coach_type" translatable="false">Select a type of coach!</string>
+    <string name="trainer_type" translatable="false">Performance Trainers</string>
+    <string name="reset" translatable="false">Reset</string>
+    <string name="grade" translatable="false">Grade</string>
+    <string name="specializations" translatable="false">Specialization</string>
+    <string name="get_in_touch2" translatable="false">Get in Touch</string>
+    <string name="let_fitcru_decide_my_coach" translatable="false">Let FitCru decide my Coach</string>
+    <string name="sender_id" translatable="false">537683156161</string>
+    <string name="weekly_plans" translatable="false">Weekly Plan</string>
+    <string name="new_connection">new connection</string>
+    <string name="opponent_pending">Pending</string>
+    <string name="text_status_connect">Connect…</string>
+    <string name="text_status_checking">Checking…</string>
+    <string name="text_status_connected">Connected</string>
+    <string name="text_status_disconnected">Disconnected</string>
+    <string name="opponent_closed">Closed</string>
+    <string name="text_status_no_answer">No answer</string>
+    <string name="text_status_rejected">Rejected</string>
+    <string name="text_status_hang_up">Hung up</string>
+
+    <string name="error_login">Use your email or alphanumeric characters in a range from 3 to 50. First character must be a letter.</string>
+    <string name="error_display_name">Use alphanumeric characters and spaces in a range from 3 to 20. Cannot contain more than one space in a row.</string>
+
+    <string name="splash_app_version">v %s</string>
+    <string name="hint_user_display_name">Display name</string>
+
+    <string name="title_login_activity">Enter to chat</string>
+
+    <string name="text_welcoming_message">Please enter username and chat room name. \nYou can join existed chat room.</string>
+    <string name="hint_login">Login</string>
+
+    <string name="text_select_dialog_to_join">Select dialog you want to join</string>
+
+    <string name="loading_users_error">Loading users error. Error</string>
+    <string name="removeDataError">Logout error</string>
+    <string name="dialogs_deletion_error">Dialog deletion errors</string>
+
+    <!--Permissions Screen-->
+    <string name="permission_unavailable">%s is not available now!</string>
+
+    <!--Select Users Screen-->
+    <string name="text_select_users_to_call">Select users you want to call</string>
+    <string name="title_one_user_selected">%s user selected</string>
+    <string name="tile_many_users_selected">%s users selected</string>
+    <string name="menu_refresh_users">Refresh</string>
+    <string name="menu_select_people_done">Done</string>
+    <string name="placeholder_username_you">%s (you)</string>
+    <string name="select_users_choose_users">Please, choose at least one participant</string>
+
+    <string name="push_notification_message" translatable="false">"Coach is calling you..."</string>
+    <string name="text_push_notification_message" translatable="false">"%s is calling you..."</string>
+
+    <!--Call Screen-->
+    <string name="in_conference">In Conference</string>
+    <string name="text_local_name">Me</string>
+    <string name="camera_swicth_failed">\"Failed switch camera\"</string>
+    <string name="opponents">and %s other</string>
+    <string name="text_status_closed">Closed</string>
+
+    <!--action bar-->
+    <string name="subtitle_text_logged_in_as">Logged in as %s</string>
+    <string name="actionbar_title_settings">Settings</string>
+
+    <!-- Dialogs strings. -->
+    <string name="dlg_creating_new_user">Creating new user…</string>
+    <string name="dlg_loading_dialogs_users">Loading dialogs and users…</string>
+    <string name="dlg_retry">Retry</string>
+    <string name="dlg_updating_dialog">Updating dialog…</string>
+    <string name="dlg_create_dialog">Creating dialog…</string>
+    <string name="dlg_loading_opponents">Loading opponents…</string>
+    <string name="dlg_signal_error">Disconnected… Please check your Internet connection!</string>
+    <string name="dlg_login_error">The user does not logged</string>
+    <string name="dlg_allow">Allow</string>
+
+    <string name="login_chat_login_error">Login Chat error. Please relogin. Error</string>
+    <string name="login_chat_retry">Trying Relogin. Please wait a moment</string>
+
+    <!--menu-->
+    <string name="action_start_login">Done</string>
+    <string name="action_leave_dialog">Leave Dialog</string>
+    <string name="action_start_video_call">Video call</string>
+    <string name="action_start_audio_call">Audio call</string>
+    <string name="action_start_broadcast_call">Join to broadcast</string>
+    <string name="action_update_opponens_list">Update opponents list</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_screen_share">Screen share</string>
+    <string name="action_dialogs_app_info">App Info</string>
+
+    <!--Incoming Call-->
+    <string name="text_incoming_audio_call">Incoming Audio Call</string>
+    <string name="text_incoming_video_call">Incoming Video Call</string>
+
+    <!--action bar-->
+    <string name="title_one_dialog_selected">%s dialog selected</string>
+    <string name="tile_many_dialogs_selected">%s dialogs selected</string>
+
+    <!--Call-->
+    <string name="also_on_call">Also on call:</string>
+    <string name="user_list_on_call">User 1, User 2, User 3, User 4, User 5, User 6</string>
+    <string name="connection_was_lost">Connection was lost</string>
+    <string name="opponent">and %s </string>
+    <string name="accepted">Accepted</string>
+    <string name="stop_share">Stop</string>
+    <string name="you">You</string>
+
+    <!-- App info -->
+    <string name="appinfo_application_version">Application version:</string>
+    <string name="appinfo_qbsdk_version">QuickBlox SDK version:</string>
+    <string name="appinfo_application_id">Application ID:</string>
+    <string name="appinfo_authorization_key">Authorization key:</string>
+    <string name="appinfo_authorization_secret">Authorization secret:</string>
+    <string name="appinfo_account_key">Account key:</string>
+    <string name="appinfo_api_domain">API domain:</string>
+    <string name="appinfo_chat_domain">Chat domain:</string>
+    <string name="appinfo_title">App Info</string>
+    <string name="appinfo_qa_verion">QA version:</string>
+
+    <!--Notification-->
+    <string name="notification_title">You have an active call</string>
+    <string name="notification_text">Touch takes you back to the call %1$s</string>
+
+    <!-- Errors strings. -->
+    <string name="error_qb_credentials_empty">Credentials are wrong or empty. You have to set:
+        Application ID, Authentification Key, Authentification Secret, Account Key in constants in App.java
+        and you have to set Sender ID in the string resources to launch application.
+        If you haven\'t them you can register new account and application at https://admin.quickblox.com
+        then put Application credentials from Overview page + Account key from https://admin.quickblox.com/account/settings</string>
+    <string name="sign_up_error">Error creating new user, please try again</string>
+    <string name="sign_in_error">Error SignIn user, please try again</string>
+    <string name="update_user_error">Error updating User, please try again</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="dlg_error">Error</string>
+    <string name="dlg_error_loading">Loading dialog error. Error</string>
+    <string name="dialogs_creation_error">Dialog creation errors</string>
+    <string name="join_conference">Join to conference…</string>
+    <string name="join_conference_error">Join to conference errors</string>
+    <string name="error_connection">Connection failed. Please check your internet connection.</string>
+    <string name="error_response_timeout">No response received within reply timeout</string>
+    <string name="error_max_opponents_count">You can select up to %d opponents</string>
+    <string name="error_permission_video">You should allow Camera permission</string>
+    <string name="error_permission_audio">You should allow Microphone permission</string>
+    <string name="error_get_permission">Error getting permissions</string>
+    <string name="versionNam" translatable="false">QuickBlox Video Chat Kotlin
+Build version 4.1.0</string>
+</resources>

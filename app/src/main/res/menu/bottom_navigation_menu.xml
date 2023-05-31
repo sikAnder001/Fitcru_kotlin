@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home2"
+        android:checked="true"
+        android:icon="@drawable/back_home_selected"
+        android:menuCategory="secondary"
+        android:title="Home" />
+    <item
+        android:id="@+id/workout"
+        android:icon="@drawable/back_workout_selected"
+        android:menuCategory="secondary"
+        android:title="Workout" />
+    <item
+        android:id="@+id/coaching"
+        android:icon="@drawable/back_coaching_selected"
+        android:menuCategory="secondary"
+        android:title="Coaching" />
+    <item
+        android:id="@+id/nutrition"
+        android:icon="@drawable/back_nutri_selected"
+        android:menuCategory="secondary"
+        android:title="Nutrition" />
+
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/back_chat"
+        android:menuCategory="secondary"
+        android:title="Chat" />
+
+</menu>

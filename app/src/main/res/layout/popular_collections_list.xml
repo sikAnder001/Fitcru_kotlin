@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        app:cardCornerRadius="15dp">
+
+        <ImageView
+            android:id="@+id/imgIMG"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/shoulder_img" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/new_collection_background"
+            android:fontFamily="@font/notosans_extrabold"
+            android:gravity="center"
+            android:text="SHOULDERS"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/session_numbersTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/new_collection_background"
+            android:fontFamily="@font/notosans_bold"
+            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            android:text="@string/sessions"
+            android:textColor="@color/white2"
+            android:textSize="14dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

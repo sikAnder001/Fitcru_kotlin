@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="12dp"
+    android:background="@drawable/my_reminders_edit_text_bg"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/items_container1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:scaleType="center"
+            android:src="@drawable/serving_ion" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginHorizontal="2dp"
+                android:fontFamily="@font/manrope_semibold"
+                android:gravity="start"
+                android:text="@string/lunch"
+                android:textColor="@color/grey_20"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/manrope_semibold"
+                android:gravity="start"
+                android:text="@string/lorem_ipsum_lorem_ipsum"
+                android:textColor="@color/grey_60"
+                android:textSize="14sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ImageView
+            android:id="@+id/dots_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="9dp"
+            android:src="@drawable/more_icon" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/items_container2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alarm_light_icon" />
+
+        <TextView
+            android:id="@+id/time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/manrope_semibold"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="@string/_1_10_pm"
+            android:textColor="@color/grey_20"
+            android:textSize="12sp" />
+
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="25dp"-->
+        <!--            android:src="@drawable/repeat_icon" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/repeat_tv"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginStart="2dp"-->
+        <!--            android:fontFamily="@font/manrope_semibold"-->
+        <!--            android:gravity="center"-->
+        <!--            android:padding="3dp"-->
+        <!--            android:text="@string/delay"-->
+        <!--            android:textColor="@color/grey_20"-->
+        <!--            android:textSize="12sp" />-->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

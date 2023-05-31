@@ -1,0 +1,1804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.CoachPlanDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey_100_"
+        tools:context=".activities.SubscriptionPlanActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_cons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/gobackbtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+                android:background="@drawable/back_btn_circular_background"
+                android:src="@drawable/back_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/skip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="16dp"
+                android:gravity="center"
+                android:text="@string/lbl_skip"
+                android:textColor="@color/overlay_light_60"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_cons">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/coachNameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/notosans_extrabold"
+                        android:gravity="center"
+                        android:text="@string/coach_name"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/s_plan_rec"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:overScrollMode="never"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/sub_text" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginTop="30dp"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:text="@string/How_it_works"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_howitworks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                        <TextView
+                            android:id="@+id/frequently_asked_questions_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/manrope_semibold"
+                            android:text="FAQ's"
+                            android:textColor="@color/offwhite"
+                            android:textSize="18sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/get_in_touch_container" />
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/frequently_asked_questions_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/frequently_asked_questions_tv">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_one_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_one"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="@string/what_is_fitcru_coaching"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_one_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="@string/a_platform_where_you_as_a_client_can_select_from_fitness_coaches_dietician_s_and_mental_health_coaches_or_have_a_combination_of_2_or_all_weather_it_s_just_fitness_or_holistic_health_goals_require_skilled_coaches_and_at_fitcru_we_do_just_that_our_trained_and_qualified_coaches_are_ready_to_get_you_to_your_goals_as_a_client_our_world_class_coaching_team_will_be_there_to_guide_and_support_you_every_step_of_the_way_so_you_can_learn_how_to"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Eat better, without dieting or feeling deprived."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Get active, no matter what shape you’re in now."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Ditch the food rules, dropping the fad diets and conflicting advice."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Build fitness into your life, without it taking over."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Achieve, and maintain, your goals, even when life feels unpredictable."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Improve your health and fitness."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Achieve, and maintain, your goals, even when life feels unpredictable."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_2_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Can I select more than one coach?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_2_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="@string/yes_at_fitcru_you_can_select_a_fitness_coach_to_give_you_any_kind_of_workout_programs_and_nutritional_guidance_to_help_you_get_closer_to_your_physical_fitness_goals_if_you_re_diagnosed_with_any_medical_ailment_then_we_recommended_taking_a_combination_of_fitness_coach_s_and_diet_coaches_if_you_re_facing_any_mental_health_isssues_then_just_like_fitness_or_diet_coaches_you_can_also_select_a_mental_health_coach_to_help_you_overcome_issues_and_reach_holistic_fitness"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_3_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Is my data safe and secure?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_3_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="@string/yes_we_are_a_client_centric_company_we_store_your_data_and_share_it_only_with_you_and_your_coach_your_coaches_have_signed_an_nda_and_a_contact_to_ensure_they_do_not_share_any_personal_information_on_social_media_or_anywhere_else_without_your_written_consent"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_4_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Can I select only dietician or mental health coaching?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_4_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="@string/yes_you_can_select_one_two_or_any_number_of_coaches_as_needed_a_coach_is_a_skilled_professional_who_will_help_you_with_the_right_tools_to_make_the_right_choices_in_life_and_get_you_closer_to_your_goals"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_5_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="How does this work?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_5_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="@string/select_the_coach_and_duration_of_the_plan_fill_up_a_health_questionnaire_after_the_purchase_of_the_plan_select_a_date_and_time_of_your_first_consultation_with_your_coach_once_your_coach_consult_calm_is_done_you_coach_will_have_all_the_information_required_about_your_dietary_preferences_and_allergies_workout_preferences_life_commitments_work_commitments_etc_your_coaches_will_create_a_program_for_you_which_is_sustainable_and_easily_executable_for_you"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_6_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="How to select a coach? "
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_6_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="@string/based_on_your_requirements_budget_choice_of_experienced_coaches_and_location_you_can_search_any_coach_you_want_from_our_elite_roster_you_can_select_any_number_of_coaches_from_different_categories_to_form_and_structure_your_fitness_journey"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_7_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Can I pay with EMI ?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_7_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="Yes. We have EMI options for our plans. You can explore them as your proceed to Checkout."
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_8_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="What if I don’t like my coach?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_8_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="We are a client centric company and believe our clients need to be completely satisfied. If you’re unhappy with the plan we offer a 15 day money back Guarentee. \nWe grow on our testimonials and referrals. We would want you to be happy with our support."
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_9_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Can I change my coach? "
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_9_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="@string/yes_once_you_start_you_can_change_your_coach_within_15_days_from_any_coach_in_the_same_category_or_you_can_upgrade_to_a_higher_category_more_experienced_coach_data_from_your_consult_call_is_recorded_and_shared_with_the_new_coach_only_once_you_change_the_coach"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_10_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_10"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Why are there different categories of coaches?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_10_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="Based on their experience and qualifications our coaches have been placed in a specific slab. Our goal is to make all the best coaches in the world available for you. You can choose any coach based on your preferences."
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_11_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_11"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="I have medical conditions? Will my diet and workout be designed accordingly?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_11_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="@string/yes_with_our_nutrition_coaches_dietician_s_you_can_get_the_best_and_the_most_sound_diet_plans_for_you_they_will_be_convenient_and_easy_to_manage_our_coaches_are_qualified_to_prescribe_the_right_supplementation_if_you_re_willing_or_require_to_consume"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_12_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_12"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Are there any side effects to the diet and supplements?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_12_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="Our coaches are completely qualified and competent to prescribe supplementation. You can even book blood tests and have the results shared with your coaches."
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_13_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_13"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Do I have to consume the supplements suggested by the coaches?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_13_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="It’s absolutely upto you. They will simply suggest what as per their education and experience seems apt for you."
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_14_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_14"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="What is nutrition coaching for?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_14_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="@string/nutrition_coaching_allows_clients_to_get_weekly_menus_and_habit_coaching_it_will_make_deciding_what_s_to_eat_and_when_to_eat_extremely_easy_our_menus_have_the_exact_portions_that_you_need_to_consume_not_only_do_we_work_on_your_food_habits_with_a_simple_and_sustainable_meal_plan_but_we_also_equip_you_to_get_independent_to_choose_better_foods_and_get_healthier_by_teaching_you_how_to"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="eating slowly and mindfully."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="tune into hunger and appetite cues."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="plan grocery shopping."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="choose the right items from the store."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="store and preparing food correctly."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="avoid problem foods."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="choose better options at restaurants."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_15_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_15"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="How will fitcru help me ?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_15_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="We do believe that a healthy diet generally consists of:"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Whole, minimally processed foods."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Lots of plants."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Enough protein to meet your needs."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="A healthy mix of different fats."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Plenty of water. and"
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Carbohydrates based on activity levels."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="Through lessons, assignments, and daily habits:"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="We help clients find the right mix of all these foods for their goals, lifestyle, and preferences."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="We show them how to make meals suitable for them."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="And we help them stay consistent."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="We go much deeper than just the food.\nWe also dig into:"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Food behaviors (food timing, meal frequency, meal speed, and food amount)."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Food attitudes (food views, restriction vs. abundance, disordered thinking)."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Stress management (in general, how it relates to food)."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Rest, recovery, and sleep (in general, how they relate to food)."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Outlook (confidence, resiliency, mastery, and growth mindset)."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Identification and solving of habits that are creating obstacles for your health."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                            android:padding="5dp"
+                                            android:src="@drawable/circular_icon1" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:buttonTint="@color/white"
+                                            android:fontFamily="@font/manrope_regular"
+                                            android:text="Video based remote Workouts to be done anytime and at anyplace."
+                                            android:textColor="@color/white"
+                                            android:textSize="12sp"
+                                            android:textStyle="bold" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_16_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_16"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="How often can I change meals if I’m not happy with the meal plan?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_16_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="As many times as you need to. Our coaches will only recommend what’s best for you. We all have food aversions and we will try to give you the best alternative."
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_17_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_17"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Can I change my coach?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_17_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="Yes, in 15 days from signing up."
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_18_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_18"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="How many coaches can I add to my cru?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_18_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="As many as you require."
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:id="@+id/question_19_container"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/edit_profile_edit_text_bg"
+                                android:orientation="vertical"
+                                android:padding="12dp">
+
+                                <TextView
+                                    android:id="@+id/question_19"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableEnd="@drawable/ic_arrow_down"
+                                    android:drawableTint="@color/grey_text"
+                                    android:fontFamily="@font/manrope_bold"
+                                    android:text="Can the diet help me with my medical condition?"
+                                    android:textColor="@color/grey_text"
+                                    android:textSize="16sp" />
+
+                                <LinearLayout
+                                    android:id="@+id/answer_19_container"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:buttonTint="@color/white"
+                                        android:fontFamily="@font/manrope_regular"
+                                        android:padding="5dp"
+                                        android:text="@string/we_will_provide_you_with_a_nutrition_plan_which_will_provide_your_body_with_all_the_macro_nutrients_micro_nutrients_phytonutrients_myconutrients_and_zoo_nutrients_we_will_also_guide_you_on_the_amount_of_water_or_supplements_you_require_n_nthere_is_always_a_way_to_make_it_better"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:textStyle="bold" />
+
+                                </LinearLayout>
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"></View>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

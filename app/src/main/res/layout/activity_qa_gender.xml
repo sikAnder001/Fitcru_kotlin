@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay_dark_90"
+    tools:context=".activities.QaGenderActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_cons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/gobackbtn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:background="@drawable/back_btn_circular_background"
+            android:src="@drawable/back_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/skip_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:fontFamily="@font/satoshi_regular"
+            android:text="SKIP"
+            android:textColor="@color/overlay_light_60"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_cons">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/aboutyou_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/manrope_extrabold"
+                android:gravity="center"
+                android:text="@string/what_s_your_gender"
+                android:textColor="@color/white"
+                android:textSize="19dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/line_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="25dp"
+                android:fontFamily="@font/manrope_regular"
+                android:gravity="center"
+                android:text="@string/to_give_you_better_experience_we_n_need_to_know_your_gender"
+                android:textColor="@color/grey_40"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aboutyou_text" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mail_const"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginVertical="75dp"
+                android:background="@drawable/gender_before_check_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line_text">
+
+
+                <ImageView
+                    android:id="@+id/male"
+                    android:layout_width="95dp"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/male_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/one" />
+
+                <TextView
+                    android:id="@+id/male_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_regular"
+                    android:gravity="center"
+                    android:text="Male"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/male"
+                    app:layout_constraintStart_toStartOf="@+id/male"
+                    app:layout_constraintTop_toBottomOf="@+id/male"
+                    app:tint="@color/one" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <ImageView
+                android:id="@+id/male_checked"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="119dp"
+                android:src="@drawable/mal_femail_checkbox_icon"
+                android:visibility="gone"
+                app:backgroundTint="@color/white"
+
+                app:layout_constraintBottom_toTopOf="@+id/mail_const"
+                app:layout_constraintEnd_toEndOf="@+id/mail_const"
+                app:layout_constraintStart_toStartOf="@+id/mail_const"
+                app:layout_constraintTop_toTopOf="@id/mail_const" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/female_const"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginVertical="55dp"
+                android:background="@drawable/gender_before_check_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mail_const">
+
+                <ImageView
+                    android:id="@+id/female"
+                    android:layout_width="97dp"
+                    android:layout_height="89dp"
+                    android:layout_marginTop="15dp"
+                    android:src="@drawable/female_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/one" />
+
+                <TextView
+                    android:id="@+id/female_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/manrope_regular"
+                    android:gravity="center"
+                    android:text="Female"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/female"
+                    app:layout_constraintStart_toStartOf="@+id/female"
+                    app:layout_constraintTop_toBottomOf="@+id/female" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/female_checked"
+                android:layout_width="49dp"
+                android:layout_height="49dp"
+                android:layout_marginLeft="119dp"
+                android:src="@drawable/mal_femail_checkbox_icon"
+                android:visibility="gone"
+
+                app:backgroundTint="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/female_const"
+                app:layout_constraintEnd_toEndOf="@+id/female_const"
+                app:layout_constraintStart_toStartOf="@+id/female_const"
+                app:layout_constraintTop_toTopOf="@id/female_const" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="25dp"
+                android:gravity="center_vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/female_const">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/nextBtn"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/background_circular"
+                        android:padding="25dp"
+                        android:src="@drawable/next_btn"
+                        app:tint="@color/white" />
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/progressIndicator"
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_centerInParent="true"
+                        android:progress="100"
+                        app:indicatorColor="@color/two"
+                        app:indicatorSize="95dp"
+                        app:trackColor="@color/transparent_20"
+                        app:trackThickness="3dp" />
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
